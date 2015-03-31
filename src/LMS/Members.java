@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Interfaces;
+package LMS;
 
 import com.mysql.jdbc.Connection;
 import java.sql.PreparedStatement;

@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Interfaces; // add your project here
+package LMS; // add your project here
 
+import Interfaces.Admin;
 import Interfaces.Admin;
 import LMS.DBconnect;
 import com.mysql.jdbc.Connection;
