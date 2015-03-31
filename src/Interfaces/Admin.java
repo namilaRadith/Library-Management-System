@@ -45,7 +45,7 @@ public class Admin extends javax.swing.JFrame {
     copyOfTextBooks ct = new copyOfTextBooks(); // 
     copyOfPublishedBooks cp = new copyOfPublishedBooks();
     copyOfPublishedBooks cp2 = new copyOfPublishedBooks();
-    //lolololololololololololololololololo
+
     
 
     
@@ -61,10 +61,7 @@ public class Admin extends javax.swing.JFrame {
         con = DBconnect.connect();
         //this hide the renew group when page load 
         hideGroup(jPanel9, jPanel10);
-        
-        // KAKKA BARAI OI 
-        // :P:P:P:P:P: :D 
-        //kljlkjlkjlkjlkjlk
+
 
         hideButtons();
 
