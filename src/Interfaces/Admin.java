@@ -24,7 +24,6 @@ import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.view.JasperViewer;
-import static org.hibernate.criterion.Projections.rowCount;
 
 /**
  *
@@ -38,14 +37,18 @@ public class Admin extends javax.swing.JFrame {
     Connection con = null;
     PreparedStatement pst = null;
     ResultSet rs = null;
+    int rowCount; // Row Selection variable in Edit Method
+    public String LibraryID; // Delete member GLOBAL ID
+    
+    
     String title, authorFirstName, authorSecondName, publisher, description, ISBN, edition, noOfCopies, catogory, section, semester, year;
     copyOfTextBooks ct = new copyOfTextBooks(); // 
     copyOfPublishedBooks cp = new copyOfPublishedBooks();
     copyOfPublishedBooks cp2 = new copyOfPublishedBooks();
+    //lolololololololololololololololololo
     
-    int rowCount; // Row Selection variable in Edit Method
 
-    public String LibraryID; // Delete member GLOBAL ID
+    
     private Object model;
     private Object rsc2;
 
@@ -59,7 +62,7 @@ public class Admin extends javax.swing.JFrame {
         //this hide the renew group when page load 
         hideGroup(jPanel9, jPanel10);
         
-       
+        // KAKKA BARAI OI 
 
         hideButtons();
 
