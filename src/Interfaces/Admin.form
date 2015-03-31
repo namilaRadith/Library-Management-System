@@ -71,6 +71,8 @@
     </Component>
     <Component class="javax.swing.ButtonGroup" name="searchBook">
     </Component>
+    <Component class="javax.swing.ButtonGroup" name="SearchByGroup">
+    </Component>
     <Menu class="javax.swing.JMenuBar" name="jMenuBar4">
       <SubComponents>
         <Menu class="javax.swing.JMenu" name="jMenu8">
@@ -114,7 +116,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <Component id="jTabbedPane1" max="32767" attributes="0"/>
-                      <EmptySpace min="-2" pref="508" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -1366,6 +1368,9 @@
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="jRadioButton11">
                       <Properties>
+                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                          <ComponentRef name="SearchByGroup"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="Search By Name "/>
                       </Properties>
                       <Events>
@@ -1374,6 +1379,9 @@
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="jRadioButton12">
                       <Properties>
+                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                          <ComponentRef name="SearchByGroup"/>
+                        </Property>
                         <Property name="selected" type="boolean" value="true"/>
                         <Property name="text" type="java.lang.String" value="Search By User ID "/>
                       </Properties>

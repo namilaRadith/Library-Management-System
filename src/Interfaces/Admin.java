@@ -55,14 +55,14 @@ public class Admin extends javax.swing.JFrame {
     public Admin() {
         //basuru 
         initComponents();
-        setExtendedState(MAXIMIZED_BOTH);
+        setExtendedState(NORMAL);
 
         //connect to DB
         con = DBconnect.connect();
         //this hide the renew group when page load 
         hideGroup(jPanel9, jPanel10);
 
-
+        tableload();
         hideButtons();
 
         
@@ -131,6 +131,7 @@ public class Admin extends javax.swing.JFrame {
         jMenu7 = new javax.swing.JMenu();
         bookType = new javax.swing.ButtonGroup();
         searchBook = new javax.swing.ButtonGroup();
+        SearchByGroup = new javax.swing.ButtonGroup();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
@@ -926,6 +927,7 @@ public class Admin extends javax.swing.JFrame {
 
         jLabel46.setText("User ID :");
 
+        SearchByGroup.add(jRadioButton11);
         jRadioButton11.setText("Search By Name ");
         jRadioButton11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -933,6 +935,7 @@ public class Admin extends javax.swing.JFrame {
             }
         });
 
+        SearchByGroup.add(jRadioButton12);
         jRadioButton12.setSelected(true);
         jRadioButton12.setText("Search By User ID ");
         jRadioButton12.addActionListener(new java.awt.event.ActionListener() {
@@ -2005,7 +2008,7 @@ public class Admin extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jTabbedPane1)
-                        .addGap(508, 508, 508))
+                        .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -2784,6 +2787,7 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JLabel ItemNoLable;
     private javax.swing.JTextArea MemAddressIn;
     private javax.swing.JTextField NOIBIN;
+    private javax.swing.ButtonGroup SearchByGroup;
     private javax.swing.JTextField aFirstNameIn;
     private javax.swing.JTextField aSecondNameIn;
     private javax.swing.JButton addBookButton;
