@@ -43,6 +43,8 @@ public class Admin extends javax.swing.JFrame {
     copyOfPublishedBooks cp = new copyOfPublishedBooks();
     copyOfPublishedBooks cp2 = new copyOfPublishedBooks();
     
+    // basuru uba koheda?? 
+    
     int rowCount; // Row Selection variable in Edit Method
 
     public String LibraryID; // Delete member GLOBAL ID
