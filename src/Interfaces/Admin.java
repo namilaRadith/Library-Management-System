@@ -41,6 +41,7 @@ public class Admin extends javax.swing.JFrame {
     String title, authorFirstName, authorSecondName, publisher, description, ISBN, edition, noOfCopies, catogory, section, semester, year;
     copyOfTextBooks ct = new copyOfTextBooks(); // 
     copyOfPublishedBooks cp = new copyOfPublishedBooks();
+    copyOfPublishedBooks cp2 = new copyOfPublishedBooks();
     
     int rowCount; // Row Selection variable in Edit Method
 
@@ -49,6 +50,7 @@ public class Admin extends javax.swing.JFrame {
     private Object rsc2;
 
     public Admin() {
+        //basuru 
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
 
