@@ -15,6 +15,7 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import LMS.DBconnect;
 import static LMS.InterfaceMethods.hideGroup;
+import java.awt.HeadlessException;
 import java.util.HashMap;
 import javax.swing.table.DefaultTableModel;
 import net.proteanit.sql.DbUtils;
@@ -42,9 +43,9 @@ public class Admin extends javax.swing.JFrame {
     
     
     String title, authorFirstName, authorSecondName, publisher, description, ISBN, edition, noOfCopies, catogory, section, semester, year;
-    copyOfTextBooks ct = new copyOfTextBooks(); // 
-    copyOfPublishedBooks cp = new copyOfPublishedBooks();
-    copyOfPublishedBooks cp2 = new copyOfPublishedBooks();
+    copyOfTextBooks ct = new copyOfTextBooks(); //copy of textbooks object
+    copyOfPublishedBooks cp = new copyOfPublishedBooks(); //copy of publishedbooks object
+   
 
     
 
@@ -68,7 +69,76 @@ public class Admin extends javax.swing.JFrame {
         
 
     }
+    /*------ namila ---------*/
+    //function control the enability of below radio buttons
+    public void BookTypeRadioButtonEnable(boolean b) {
+        publishedBookRadio.setEnabled(b);
+        textBookRadio.setEnabled(b);
+    }
 
+    public void textBookSelected() {
+        publisherIn.setEnabled(false);
+        isbnIn.setEnabled(false);
+
+        publishedBookYearIn.setVisible(false);
+        yearLable.setVisible(false);
+        sectionIn.setEnabled(true);
+        semesterIn.setEnabled(true);
+        yearIn.setEnabled(true);
+    }
+
+    public void publishedBookSelected() {
+        publisherIn.setEnabled(true);
+        isbnIn.setEnabled(true);
+        categoryIn.setEnabled(true);
+        publishedBookYearIn.setVisible(true);
+        yearLable.setVisible(true);
+        sectionIn.setEnabled(false);
+        semesterIn.setEnabled(false);
+        yearIn.setEnabled(false);
+        publishedBookRadio.setSelected(rootPaneCheckingEnabled);
+    }
+
+    public void resetResorcesFileds() {
+        titleIn.setText("");
+        aFirstNameIn.setText("");
+        aSecondNameIn.setText("");
+        publisherIn.setText("");
+        bookDescriptionIn.setText("");
+        isbnIn.setText("");
+        editionIn.setText("");
+        noOfCopiesIn.setText("");
+        categoryIn.setSelectedItem("Select One");
+        publishedBookYearIn.setText("Select One");
+        sectionIn.setSelectedItem("Select One");
+        yearIn.setSelectedItem("Select One");
+        semesterIn.setSelectedItem("Select One");
+        ItemNoLable.setText("");
+        publishedBookYearIn.setText("");
+
+        BookTypeRadioButtonEnable(true);
+    }
+
+    public void ResorcesFiledsEnable(boolean b) {
+        titleIn.setEnabled(b);
+        aFirstNameIn.setEnabled(b);
+        aSecondNameIn.setEnabled(b);
+        publisherIn.setEnabled(b);
+        bookDescriptionIn.setEnabled(b);
+        isbnIn.setEnabled(b);
+        editionIn.setEnabled(b);
+        noOfCopiesIn.setEnabled(b);
+        categoryIn.setEnabled(b);
+        publishedBookYearIn.setEnabled(b);
+        sectionIn.setEnabled(b);
+        yearIn.setEnabled(b);
+        semesterIn.setEnabled(b);
+        ItemNoLable.setEnabled(b);
+        publishedBookYearIn.setEnabled(b);
+
+       
+    }
+    
     public void hideButtons() {
       
         sectionIn.setEnabled(false);
@@ -79,7 +149,145 @@ public class Admin extends javax.swing.JFrame {
         removeBookButton.setEnabled(false);
 
     }
+     
+    public void reset() {
+        resetResorcesFileds();
+        ResorcesFiledsEnable(true);
+        publishedBookSelected();
+        addBookButton.setEnabled(true);
+        editBookButton.setEnabled(false);
+        saveBookButton.setEnabled(false);
+        removeBookButton.setEnabled(false);
+    }
+     
+    public boolean validatePublishedBooks() throws HeadlessException {
+        boolean success3 = false;
+        
+        String alphaNumeric = "[A-Za-z0-9]+";
+        String regex="^[a-zA-Z ]+$";
+        String numeric = "[-+]?\\d*\\.?\\d+";
+        
+        
+        
+        if(edition.matches(alphaNumeric)){
+            if(publisher.matches(regex)){
+                if(ISBN.matches(numeric)){
+                    if(year.matches(numeric) && year.length() <5){
+                        success3 = true;
+                    }else{
+                        JOptionPane.showMessageDialog(null, " Year should be Numeric and less than 5 digits ", "Warning", WIDTH);
+                        success3 = false;
+                    }
+                }else{
+                    JOptionPane.showMessageDialog(null, " ISBN  should be Numeric ", "Warning", WIDTH);
+                    success3 = false;
+                }
+            }else{
+                JOptionPane.showMessageDialog(null, "Publisher should be letters ", "Warning", WIDTH);
+                success3 = false;
+            }
+        }else{
+            JOptionPane.showMessageDialog(null, "Edition Should be Alpha Numeric", "Warning", WIDTH);
+            success3 = false;
+        }
+        return  success3;
+    }
 
+    public boolean validateResourseInputs() throws HeadlessException {
+        String regex="^[a-zA-Z ]+$";
+        String numeric = "[-+]?\\d*\\.?\\d+";
+        boolean success = false;
+        if(title.matches(regex)){
+            if(authorFirstName.matches(regex)){
+                if(authorSecondName.matches(regex)){
+                    
+                    if(!description.isEmpty()){
+                        if(noOfCopies.matches(numeric)){
+                            if(categoryIn.getSelectedIndex() != 0){
+                                success = true;
+                            }else{
+                                JOptionPane.showMessageDialog(null, "Please select a category", "Warning", WIDTH);
+                                success = false;
+                                
+                            }
+                        }else{
+                            JOptionPane.showMessageDialog(null, "No of Copies should be Numeric ", "Warning", WIDTH);
+                            success = false;
+                        }
+                        
+                    }else{
+                        JOptionPane.showMessageDialog(null, "Description can't be empty ", "Warning", WIDTH);
+                        success = false;
+                    }
+                    
+                    
+                }else{
+                    JOptionPane.showMessageDialog(null, "Author second name should be letters ", "Warning", WIDTH);
+                    success = false;
+                }
+            }else{
+                JOptionPane.showMessageDialog(null, "Author first name should be letters ", "Warning", WIDTH);
+                success = false;
+            }
+        }else{
+            
+            JOptionPane.showMessageDialog(null, "Title should be letters ", "Warning", WIDTH);
+            success = false;
+        }
+        return success;
+    }
+
+    public boolean validateTextBooks() throws HeadlessException {
+        boolean success2 = false;
+        
+        //validation
+        if(sectionIn.getSelectedIndex() != 0 ){
+            if(semesterIn.getSelectedIndex() != 0 ){
+                if(yearIn.getSelectedIndex() != 0 ){
+                    success2 = true;
+                    
+                    
+                }else{
+                    JOptionPane.showMessageDialog(null, "Please select a Year ", "Warning", WIDTH);
+                    success2 = false;
+                }
+            }else{
+                JOptionPane.showMessageDialog(null, "Please select a Semester ", "Warning", WIDTH);
+                success2 = false;
+                
+            }
+        }else{
+            JOptionPane.showMessageDialog(null, "Please select a Section ", "Warning", WIDTH);
+            success2 = false;
+            
+        }
+        return  success2;
+    }  
+    
+    public void edit() {
+        /*THIS ACTION ENABLE EDITING */
+        
+        //buttons and fileds enability
+        ResorcesFiledsEnable(true);
+        addBookButton.setEnabled(false);
+        editBookButton.setEnabled(false);
+        saveBookButton.setEnabled(true);
+        removeBookButton.setEnabled(true);
+        
+        if(publishedBookRadio.isSelected()){
+            //button enability
+            publishedBookSelected();
+            
+        }
+        if(textBookRadio.isSelected()){
+            //button enability
+            textBookSelected();
+            
+        }
+    }
+     
+    /*------ namila ---------*/  
+    
     //basuru
     public void clearFields()
     {
@@ -2038,15 +2246,13 @@ public class Admin extends javax.swing.JFrame {
     }//GEN-LAST:event_jTabbedPane1MouseClicked
 
     private void resetButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetButtonActionPerformed
-
-        resetResorcesFileds();
-        ResorcesFiledsEnable(true);
-        addBookButton.setEnabled(true);
-        editBookButton.setEnabled(false);
-        saveBookButton.setEnabled(false);
-        removeBookButton.setEnabled(false);
-
+        int status =  JOptionPane.showConfirmDialog(null,"This will Reset the fileds ? ", "Reset", WIDTH, WIDTH,null);
+        if(status == 0){
+            reset();
+        }
     }//GEN-LAST:event_resetButtonActionPerformed
+
+   
 
     private void publishedBookRadioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_publishedBookRadioActionPerformed
         if (publishedBookRadio.isSelected()) {
@@ -2073,7 +2279,10 @@ public class Admin extends javax.swing.JFrame {
     }//GEN-LAST:event_sectionInActionPerformed
 
     private void removeBookButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeBookButtonActionPerformed
-
+        int status =  JOptionPane.showConfirmDialog(null,"This will Delete the recorde Permently ? ", "DELETE", WIDTH, WIDTH,null);
+        
+        if(status == 0){
+        
         if(publishedBookRadio.isSelected()){
             cp.delete_book();
 
@@ -2083,6 +2292,8 @@ public class Admin extends javax.swing.JFrame {
 
             ct.delete_book();
 
+        }
+            reset();
         }
     }//GEN-LAST:event_removeBookButtonActionPerformed
 
@@ -2102,62 +2313,66 @@ public class Admin extends javax.swing.JFrame {
 
             title = titleIn.getText();
             authorFirstName = aFirstNameIn.getText();
-            authorSecondName = aSecondNameIn.getText();
-            publisher = publisherIn.getText();
-            description = bookDescriptionIn.getText();
-            ISBN = isbnIn.getText();
+            authorSecondName = aSecondNameIn.getText();            
+            description = bookDescriptionIn.getText();            
             noOfCopies = noOfCopiesIn.getText();
             catogory = categoryIn.getSelectedItem().toString();
-            section = sectionIn.getSelectedItem().toString();
-            semester = semesterIn.getSelectedItem().toString();
-            edition = editionIn.getText();
+            
+            if(validateResourseInputs()){
+            
+            
 
-            //publlished book selected then below action
-            if(publishedBookRadio.isSelected()){
+                //publlished book selected then below action
+                if(publishedBookRadio.isSelected()){
 
-                year = publishedBookYearIn.getText();
-                int noOfcp = Integer.parseInt(noOfCopies);
-                JOptionPane.showMessageDialog(null, "In published books.!!", "in IF", JOptionPane.PLAIN_MESSAGE);
-                cp.update_book(ISBN, title, description, edition, catogory, year, authorFirstName, authorSecondName, publisher, noOfcp);
-                JOptionPane.showMessageDialog(null, "Sussess Fully Updated .!!", "Error", JOptionPane.PLAIN_MESSAGE);
+                    edition = editionIn.getText();
+                    ISBN = isbnIn.getText();
+                    publisher = publisherIn.getText();
+                    year = publishedBookYearIn.getText();
+
+                    if(validatePublishedBooks()){
+                        int noOfcp = Integer.parseInt(noOfCopies);
+                        JOptionPane.showMessageDialog(null, "In published books.!!", "in IF", JOptionPane.PLAIN_MESSAGE);
+                        cp.update_book(ISBN, title, description, edition, catogory, year, authorFirstName, authorSecondName, publisher, noOfcp);
+                        JOptionPane.showMessageDialog(null, "Sussess Fully Updated .!!", "Error", JOptionPane.PLAIN_MESSAGE);
+                    }else{
+                        edit();
+                    }
+                
+                }    
+                
+                //text book selected then below action
+                if(textBookRadio.isSelected()){               
+
+
+                    if(validateTextBooks()){
+                        section = sectionIn.getSelectedItem().toString();
+                        semester = semesterIn.getSelectedItem().toString();
+                        year = yearIn.getSelectedItem().toString();
+
+                        int noOfcp = Integer.parseInt(noOfCopies);
+                        JOptionPane.showMessageDialog(null, "In published books.!!", "in IF", JOptionPane.PLAIN_MESSAGE);
+                        ct.update_book(title,description,section,catogory,semester,year,authorFirstName,authorSecondName,noOfcp);
+                        JOptionPane.showMessageDialog(null, "Sussess Fully Updated .!!", "Error", JOptionPane.PLAIN_MESSAGE);
+                    }else {
+                        edit();
+                    }
+                }    
+                
+
+            }else {
+                edit();
             }
-            //text book selected then below action
-            if(textBookRadio.isSelected()){
-
-                year = yearIn.getSelectedItem().toString();
-                int noOfcp = Integer.parseInt(noOfCopies);
-                JOptionPane.showMessageDialog(null, "In published books.!!", "in IF", JOptionPane.PLAIN_MESSAGE);
-                ct.update_book(title,description,section,catogory,semester,year,authorFirstName,authorSecondName,noOfcp);
-                JOptionPane.showMessageDialog(null, "Sussess Fully Updated .!!", "Error", JOptionPane.PLAIN_MESSAGE);
-
-            }
-
-        }
+        }     
     }//GEN-LAST:event_saveBookButtonActionPerformed
 
     private void editBookButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editBookButtonActionPerformed
 
-        /*THIS ACTION ENABLE EDITING */
-
-        //buttons and fileds enability
-        ResorcesFiledsEnable(true);
-        addBookButton.setEnabled(false);
-        editBookButton.setEnabled(false);
-        saveBookButton.setEnabled(true);
-        removeBookButton.setEnabled(true);
-
-        if(publishedBookRadio.isSelected()){
-            //button enability
-            publishedBookSelected();
-
-        }
-        if(textBookRadio.isSelected()){
-            //button enability
-            textBookSelected();
-
-        }
+        edit();
 
     }//GEN-LAST:event_editBookButtonActionPerformed
+
+   
 
     private void addBookButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBookButtonActionPerformed
         /*THIS ACTION ADD NEW BOOK*/
@@ -2165,33 +2380,51 @@ public class Admin extends javax.swing.JFrame {
         title = titleIn.getText();
         authorFirstName = aFirstNameIn.getText();
         authorSecondName = aSecondNameIn.getText();
-        publisher = publisherIn.getText();
+        
         description = bookDescriptionIn.getText();
-        ISBN = isbnIn.getText();
+        
         noOfCopies = noOfCopiesIn.getText();
         catogory = categoryIn.getSelectedItem().toString();
-        edition = editionIn.getText();
-        section = sectionIn.getSelectedItem().toString();
-        semester = semesterIn.getSelectedItem().toString();
-
-        if (!title.isEmpty()) {
+        
+      
+       
+        
+     
+        if (validateResourseInputs()) {
             //JOptionPane.showMessageDialog(null,"addded.!!","in IF" ,JOptionPane.PLAIN_MESSAGE);
             //for textBook
             if (textBookRadio.isSelected()) {
+                
+                if(validateTextBooks()){
+                
+                        section = sectionIn.getSelectedItem().toString();
+                        semester = semesterIn.getSelectedItem().toString();
+                        year = yearIn.getSelectedItem().toString();
+                            
+                        int noOfcp = Integer.parseInt(noOfCopies);
+                        //call add textbook
+                        ct.add_Book(title,description,section,catogory,semester,year,authorFirstName,authorSecondName,noOfcp);
 
-                year = yearIn.getSelectedItem().toString();
-                int noOfcp = Integer.parseInt(noOfCopies);
-                ct.add_Book(title,description,section,catogory,semester,year,authorFirstName,authorSecondName,noOfcp);
-
-                JOptionPane.showMessageDialog(null, "addded.!!", "in IF", JOptionPane.PLAIN_MESSAGE);
+                        JOptionPane.showMessageDialog(null, "Record Added Sussesfully", "Message", JOptionPane.PLAIN_MESSAGE);
+                }
+                            
             }
             //for publishedBook
             if (publishedBookRadio.isSelected()) {
+                
+                edition = editionIn.getText();
+                publisher = publisherIn.getText();
+                ISBN = isbnIn.getText();
                 year = publishedBookYearIn.getText();
-                int noOfcp = Integer.parseInt(noOfCopies);
-                JOptionPane.showMessageDialog(null, "In published books.!!", "in IF", JOptionPane.PLAIN_MESSAGE);
-                cp.add_Book(ISBN, title, description, edition, catogory, year, authorFirstName, authorSecondName, publisher, noOfcp);
+               
+                if(validatePublishedBooks()){
+                
+                    int noOfcp = Integer.parseInt(noOfCopies);
 
+                    //JOptionPane.showMessageDialog(null, "In published books.!!", "in IF", JOptionPane.PLAIN_MESSAGE);
+                    cp.add_Book(ISBN, title, description, edition, catogory, year, authorFirstName, authorSecondName, publisher, noOfcp);
+                    JOptionPane.showMessageDialog(null, "Record Added Sussesfully", "Message", JOptionPane.PLAIN_MESSAGE);    
+                } 
                 //bookType = "Published Book";
             }
 
@@ -2201,6 +2434,8 @@ public class Admin extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_addBookButtonActionPerformed
+
+ 
 
     private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
         // TODO add your handling code here:
@@ -2677,73 +2912,7 @@ public class Admin extends javax.swing.JFrame {
 
     }//GEN-LAST:event_generateReportActionPerformed
 
-    //function control the enability of below radio buttons
-    public void BookTypeRadioButtonEnable(boolean b) {
-        publishedBookRadio.setEnabled(b);
-        textBookRadio.setEnabled(b);
-    }
 
-    public void textBookSelected() {
-        publisherIn.setEnabled(false);
-        isbnIn.setEnabled(false);
-
-        publishedBookYearIn.setVisible(false);
-        yearLable.setVisible(false);
-        sectionIn.setEnabled(true);
-        semesterIn.setEnabled(true);
-        yearIn.setEnabled(true);
-    }
-
-    public void publishedBookSelected() {
-        publisherIn.setEnabled(true);
-        isbnIn.setEnabled(true);
-        categoryIn.setEnabled(true);
-        publishedBookYearIn.setVisible(true);
-        yearLable.setVisible(true);
-        sectionIn.setEnabled(false);
-        semesterIn.setEnabled(false);
-        yearIn.setEnabled(false);
-    }
-
-    public void resetResorcesFileds() {
-        titleIn.setText("");
-        aFirstNameIn.setText("");
-        aSecondNameIn.setText("");
-        publisherIn.setText("");
-        bookDescriptionIn.setText("");
-        isbnIn.setText("");
-        editionIn.setText("");
-        noOfCopiesIn.setText("");
-        categoryIn.setSelectedItem("Select One");
-        publishedBookYearIn.setText("Select One");
-        sectionIn.setSelectedItem("Select One");
-        yearIn.setSelectedItem("Select One");
-        semesterIn.setSelectedItem("Select One");
-        ItemNoLable.setText("");
-        publishedBookYearIn.setText("");
-
-        BookTypeRadioButtonEnable(true);
-    }
-
-    public void ResorcesFiledsEnable(boolean b) {
-        titleIn.setEnabled(b);
-        aFirstNameIn.setEnabled(b);
-        aSecondNameIn.setEnabled(b);
-        publisherIn.setEnabled(b);
-        bookDescriptionIn.setEnabled(b);
-        isbnIn.setEnabled(b);
-        editionIn.setEnabled(b);
-        noOfCopiesIn.setEnabled(b);
-        categoryIn.setEnabled(b);
-        publishedBookYearIn.setEnabled(b);
-        sectionIn.setEnabled(b);
-        yearIn.setEnabled(b);
-        semesterIn.setEnabled(b);
-        ItemNoLable.setEnabled(b);
-        publishedBookYearIn.setEnabled(b);
-
-       
-    }
 
     /**
      * @param args the command line arguments
