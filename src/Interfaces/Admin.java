@@ -77,6 +77,8 @@ public class Admin extends javax.swing.JFrame {
         editBookButton.setEnabled(false);
         saveBookButton.setEnabled(false);
         removeBookButton.setEnabled(false);
+        updateMember.setEnabled(false);
+        deleteMember.setEnabled(false);
 
     }
 
@@ -2004,20 +2006,19 @@ public class Admin extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jTabbedPane1)
-                        .addContainerGap())
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jLabel53)
-                                .addGap(245, 245, 245)
-                                .addComponent(jButton36))
-                            .addComponent(jSeparator3))
-                        .addGap(511, 511, 511))))
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jLabel53)
+                        .addGap(219, 219, 219)
+                        .addComponent(jButton36)
+                        .addGap(22, 22, 22))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jSeparator3)
+                            .addComponent(jTabbedPane1))
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2027,7 +2028,7 @@ public class Admin extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButton36)
                     .addComponent(jLabel53))
                 .addContainerGap(28, Short.MAX_VALUE))
@@ -2622,7 +2623,7 @@ public class Admin extends javax.swing.JFrame {
     }//GEN-LAST:event_memberComboInActionPerformed
 
     private void jTable2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable2MouseClicked
-
+        deleteMember.setEnabled(true);
         editMember.setEnabled(true);
 
     }//GEN-LAST:event_jTable2MouseClicked
