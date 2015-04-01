@@ -1605,7 +1605,7 @@
                                 <StringItem index="0" value="Please Select"/>
                                 <StringItem index="1" value="Faculty"/>
                                 <StringItem index="2" value="Student"/>
-                                <StringItem index="3" value="Admin"/>
+                                <StringItem index="3" value="Staff"/>
                               </StringArray>
                             </Property>
                           </Properties>
