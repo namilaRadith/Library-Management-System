@@ -187,6 +187,28 @@ JOptionPane.showMessageDialog(null,"Password Reset! \n New Password is: "+dat );
     }
 
     
+    public String EditProfile(int id)
+    {
+    
+     try{
+        String sq25 = "Update administration Set fname='"+this.fname+"', lname = '"+this.lname+"',UserName = '"+this.Uname+"' ,address = '"+this.address+"', email = '"+this.email+"', phone = '"+this.phone+"' WHERE id = '"+id+"' ";
+        pst = con.prepareStatement(sq25);
+        pst.execute();
+        
+        String sql9 = "Update login Set userName = '"+this.Uname+"' Where id = '"+id+"'";
+         pst = con.prepareStatement(sql9);
+        pst.execute();
+    }
+    catch(Exception e){
+    
+     JOptionPane.showMessageDialog(null,"Update Failed!" );
+    
+    
+    }
+        
+    return "profile";
+    }
+    
     
     
    

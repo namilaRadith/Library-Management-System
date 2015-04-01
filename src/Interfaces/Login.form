@@ -29,12 +29,12 @@
                   <Group type="102" alignment="2" attributes="0">
                       <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="24" pref="24" max="24" attributes="0"/>
-                      <Component id="passwordInput" pref="161" max="32767" attributes="0"/>
+                      <Component id="tp" pref="161" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="2" attributes="0">
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="18" pref="18" max="18" attributes="0"/>
-                      <Component id="userNameInput" max="32767" attributes="0"/>
+                      <Component id="tu" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -51,12 +51,12 @@
               <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="userNameInput" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tu" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="passwordInput" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tp" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jButton1" min="-2" max="-2" attributes="0"/>
@@ -76,9 +76,9 @@
         <Property name="text" type="java.lang.String" value="Password"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="userNameInput">
+    <Component class="javax.swing.JTextField" name="tu">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="userNameInputActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tuActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButton1">
@@ -89,7 +89,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JPasswordField" name="passwordInput">
+    <Component class="javax.swing.JPasswordField" name="tp">
     </Component>
   </SubComponents>
 </Form>
