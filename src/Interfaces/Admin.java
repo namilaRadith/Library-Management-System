@@ -89,7 +89,7 @@ int i;
         hideButtons();
         tableload2();
          profile();
-      
+      dl();
     }
     /*------ namila ---------*/
     //function control the enability of below radio buttons
@@ -375,10 +375,10 @@ int i;
         searchMemberID.setText("");
         searchMemberName.setText("");
         
-      /*  f1.setText("");
-        f2.setText("");
-        f3.setText("");
-        f4.setText("");
+        f7.setText("");
+        f8.setText("");
+        f9.setText("");
+       /* f4.setText("");
         f5.setText("");
         f6.setText("");*/
         
@@ -390,7 +390,7 @@ int i;
         b3.setEnabled(false);
         b10.setEnabled(false);
         b12.setEnabled(false);
-        
+           save.setEnabled(false);
 
     }
     
@@ -423,15 +423,52 @@ int i;
         f4.setEditable(false);
         f5.setEditable(false);
         f6.setEditable(false);
-        
-            
-            
+        f7.setEditable(false);
+        f8.setEditable(false);    
+        f9.setEditable(false);    
             
     }
     
     catch (Exception e){System.out.println(e);}
     
     }
+    
+    
+    public void dl()
+    {
+        d1.setEditable(false);  
+         d2.setEditable(false);  
+         d3.setEditable(false);  
+         d4.setEditable(false); 
+         d5.setEditable(false); 
+         
+         try
+         {
+               String sql22 = "SELECT * FROM daylimits where id = '1'"; 
+            pst = con.prepareStatement(sql22);
+            rs = pst.executeQuery();
+            rs.first();
+         
+             String d11 = rs.getString("staffDays");
+              String d21 = rs.getString("studentDays");
+          String d31 = rs.getString("StaffLimit");
+          String d41= rs.getString("facultyLimit");
+          String d51= rs.getString("fine");
+          
+          
+          
+          d1.setText(d11);
+        d2.setText(d21);
+        d3.setText(d31);
+        d4.setText(d41);
+        d5.setText(d51);
+         }
+         
+         catch (Exception e){System.out.println(e);}
+         
+         
+    }
+    
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -482,9 +519,9 @@ int i;
         jLabel51 = new javax.swing.JLabel();
         jLabel56 = new javax.swing.JLabel();
         jLabel60 = new javax.swing.JLabel();
-        jTextField13 = new javax.swing.JTextField();
-        jTextField14 = new javax.swing.JTextField();
-        jTextField15 = new javax.swing.JTextField();
+        f7 = new javax.swing.JTextField();
+        f8 = new javax.swing.JTextField();
+        f9 = new javax.swing.JTextField();
         b12 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         f6 = new javax.swing.JTextField();
@@ -685,7 +722,7 @@ int i;
         d3 = new javax.swing.JTextField();
         d4 = new javax.swing.JTextField();
         jButton33 = new javax.swing.JButton();
-        jButton34 = new javax.swing.JButton();
+        save = new javax.swing.JButton();
         defult = new javax.swing.JButton();
         jSeparator3 = new javax.swing.JSeparator();
         jButton36 = new javax.swing.JButton();
@@ -798,6 +835,11 @@ int i;
         });
 
         b11.setText("Change Password");
+        b11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b11ActionPerformed(evt);
+            }
+        });
 
         b10.setText("Save");
         b10.addActionListener(new java.awt.event.ActionListener() {
@@ -813,6 +855,11 @@ int i;
         jLabel60.setText("Conform Password");
 
         b12.setText("Save");
+        b12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b12ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel21Layout = new javax.swing.GroupLayout(jPanel21);
         jPanel21.setLayout(jPanel21Layout);
@@ -828,9 +875,9 @@ int i;
                 .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(b12)
                     .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jTextField13)
-                        .addComponent(jTextField14)
-                        .addComponent(jTextField15, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE)))
+                        .addComponent(f7)
+                        .addComponent(f8)
+                        .addComponent(f9, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE)))
                 .addContainerGap(65, Short.MAX_VALUE))
         );
         jPanel21Layout.setVerticalGroup(
@@ -839,15 +886,15 @@ int i;
                 .addGap(49, 49, 49)
                 .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel51)
-                    .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(f7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26)
                 .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel56)
-                    .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(f8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(28, 28, 28)
                 .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel60)
-                    .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(f9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(84, 84, 84)
                 .addComponent(b12)
                 .addContainerGap(257, Short.MAX_VALUE))
@@ -2552,8 +2599,6 @@ int i;
 
         jLabel55.setText("Fine Charge :");
 
-        d5.setText("jTextField31");
-
         javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
         jPanel19.setLayout(jPanel19Layout);
         jPanel19Layout.setHorizontalGroup(
@@ -2623,10 +2668,10 @@ int i;
             }
         });
 
-        jButton34.setText("Save");
-        jButton34.addActionListener(new java.awt.event.ActionListener() {
+        save.setText("Save");
+        save.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton34ActionPerformed(evt);
+                saveActionPerformed(evt);
             }
         });
 
@@ -2651,7 +2696,7 @@ int i;
                 .addGap(67, 67, 67)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton33, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton34, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(save, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(defult, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(169, 169, 169))
         );
@@ -2670,7 +2715,7 @@ int i;
                         .addGap(40, 40, 40)
                         .addComponent(jButton33)
                         .addGap(48, 48, 48)
-                        .addComponent(jButton34)
+                        .addComponent(save)
                         .addGap(57, 57, 57)
                         .addComponent(defult)))
                 .addContainerGap(95, Short.MAX_VALUE))
@@ -3527,7 +3572,7 @@ int i;
             }
             else{
 
-                Administration ad = new Administration (fname1, lname1, uname1, add1, email1, phone1, type1 );
+                Administration ad = new Administration (fname1, lname1, uname1, add1, email1, phone1, type1);
 
                 ad.addnewmember();
 
@@ -3652,12 +3697,37 @@ int i;
     }//GEN-LAST:event_d4ActionPerformed
 
     private void jButton33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton33ActionPerformed
-        // TODO add your handling code here:
+d1.setEditable(true);  
+         d2.setEditable(true);  
+         d3.setEditable(true);  
+         d4.setEditable(true); 
+         d5.setEditable(true);        
+         
+            save.setEnabled(true);
+         
     }//GEN-LAST:event_jButton33ActionPerformed
 
-    private void jButton34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton34ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton34ActionPerformed
+    private void saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveActionPerformed
+      
+        
+        
+     
+        
+        
+          int stday = Integer.parseInt(d1.getText());
+        int studay = Integer.parseInt(d2.getText());
+        int stlimit = Integer.parseInt(d3.getText());
+        int fuclimit =Integer.parseInt( d4.getText());
+        double fine = Integer.parseInt(d5.getText());
+
+        daylimits dt = new daylimits(stday, studay, stlimit, fuclimit,fine);
+
+        dt.daylimit();
+
+        dl();
+        save.setEnabled(false);
+        
+    }//GEN-LAST:event_saveActionPerformed
 
     private void defultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_defultActionPerformed
 
@@ -3669,10 +3739,14 @@ int i;
 
         daylimits dt = new daylimits(stday, studay, stlimit, fuclimit,fine);
 
-        dt.defultdaylimit();
+        dt.daylimit();
 
         defult.setEnabled(false);
 
+        
+        dl();
+        
+        
     }//GEN-LAST:event_defultActionPerformed
 
     private void b9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b9ActionPerformed
@@ -3687,7 +3761,8 @@ int i;
     }//GEN-LAST:event_b9ActionPerformed
 
     private void b10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b10ActionPerformed
-         String fname3 = f1.getText();
+        
+        String fname3= f1.getText();
         String lname3 = f2.getText();
         
         String add3 = f3.getText();
@@ -3698,7 +3773,7 @@ int i;
         String regex="^[a-zA-Z ]+$";
         String regexemail="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$";
         String regexphone="^[0-9]+$";
-        String regexuser="^[0-9a-zA-Z]+$";
+       // String regexuser="^[0-9a-zA-Z]+$";
         String regexadd="^[0-9a-zA-Z ,]+$";
 
         if(fname3.isEmpty()||lname3.isEmpty()||add3.isEmpty()||phone3.isEmpty()||email3.isEmpty())
@@ -3746,6 +3821,110 @@ int i;
 
         }
     }//GEN-LAST:event_b10ActionPerformed
+
+    private void b11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b11ActionPerformed
+          f7.setEditable(true);
+        f8.setEditable(true);    
+        f9.setEditable(true);
+        b12.setEnabled(true);
+    }//GEN-LAST:event_b11ActionPerformed
+
+    private void b12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b12ActionPerformed
+try{
+        String sql = "SELECT * FROM administration where id = '"+i+"'"; 
+            pst = con.prepareStatement(sql);
+            rs = pst.executeQuery();
+            rs.first();
+            
+            String pass4 = f8.getText();
+           
+            if(f7.getText().isEmpty()||f8.getText().isEmpty()||f9.getText().isEmpty())
+            {
+             JOptionPane.showMessageDialog(null,"Password cannot empty!" );
+            
+            }
+            
+            else
+            {
+                if(f7.getText().equals(rs.getString("password")))
+                {
+                
+                    if(f8.getText().equals(f9.getText())){
+                
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        try{
+        
+            
+      
+String sql4 = "Update administration Set password = '"+pass4+"' Where id = '"+i+"'";
+pst = con.prepareStatement(sql4);
+pst.execute();
+
+String sql10 = "Update login Set password = '"+pass4+"' Where id = '"+i+"'";
+pst = con.prepareStatement(sql10);
+pst.execute();
+
+    clearUserFields();
+   hideUserButtons();
+   profile();
+JOptionPane.showMessageDialog(null,"Password Changed! \n New Password is: "+pass4);
+        
+        
+        }
+        
+        
+        catch(Exception e){
+        
+        JOptionPane.showMessageDialog(null,e );
+        }
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    }
+                    else
+                   {
+                   JOptionPane.showMessageDialog(null,"Password dosn't match!" );
+                   
+                   }
+                
+                }
+                
+                else{
+                
+                 JOptionPane.showMessageDialog(null,"Old Password dosn't match!" );
+                }
+                
+            
+            
+            }
+        
+}
+
+
+catch(Exception e){System.out.println(e);}
+        
+        
+        
+    }//GEN-LAST:event_b12ActionPerformed
 
 
 
@@ -3827,6 +4006,9 @@ int i;
     private javax.swing.JTextField f4;
     private javax.swing.JTextField f5;
     private javax.swing.JTextField f6;
+    private javax.swing.JTextField f7;
+    private javax.swing.JTextField f8;
+    private javax.swing.JTextField f9;
     private javax.swing.JTextField fname;
     private javax.swing.JTextField fnameIn;
     private javax.swing.JButton generateReport;
@@ -3845,7 +4027,6 @@ int i;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton30;
     private javax.swing.JButton jButton33;
-    private javax.swing.JButton jButton34;
     private javax.swing.JButton jButton36;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
@@ -3993,9 +4174,6 @@ int i;
     private javax.swing.JTextArea jTextArea7;
     private javax.swing.JTextArea jTextArea8;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField15;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
@@ -4017,6 +4195,7 @@ int i;
     private javax.swing.JButton removeBookButton;
     private javax.swing.JRadioButton renew;
     private javax.swing.JButton resetButton;
+    private javax.swing.JButton save;
     private javax.swing.JButton saveBookButton;
     private javax.swing.ButtonGroup searchBook;
     private javax.swing.JTextField searchByIdBox;

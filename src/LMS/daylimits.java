@@ -54,7 +54,7 @@ public class daylimits {
     
     
     
-    public void defultdaylimit() //throws SQLException
+    public void daylimit() //throws SQLException
     {
     try{
     String sql11 = "Update daylimits SET staffDays ='"+this.staffDays1+"' , studentDays = '"+this.studentDays1+"', staffLimit ='"+this.staffLimit1+"' , facultyLimit = '"+this.facultyLimit1+"', fine= '"+this.fine1+"' Where ID='"+1+"' ";
@@ -73,7 +73,6 @@ public class daylimits {
     
     
     }
-    
     
     
     

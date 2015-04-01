@@ -46,7 +46,7 @@ public class Administration {
          this.email = email;
          this.phone = phone;
          this.type = type;
-
+        // this.password = password; 
 
 }
 
@@ -211,7 +211,40 @@ JOptionPane.showMessageDialog(null,"Password Reset! \n New Password is: "+dat );
     
     
     
-   
+    public String Edittpassword(String id) 
+    {
+        try{
+        
+            
+      
+String sql4 = "Update administration Set password = '"+this.password+"' Where id = '"+id+"' ";
+pst = con.prepareStatement(sql4);
+pst.execute();
+
+String sql10 = "Update login Set password = '"+this.password+"' Where id = '"+id+"' ";
+pst = con.prepareStatement(sql10);
+pst.execute();
+
+
+
+JOptionPane.showMessageDialog(null,"Password Reset! \n New Password is: "+this.password);
+        
+        
+        }
+        
+        
+        catch(Exception e){
+        
+        JOptionPane.showMessageDialog(null,e );
+        }
+        
+    return "reset";
+    
+    
+    
+    
+    
+    }
     
     
     
