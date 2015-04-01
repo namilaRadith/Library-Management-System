@@ -305,8 +305,6 @@ public class Admin extends javax.swing.JFrame {
        
         searchByUserId.setText("");
         searchByNameIn.setText("");
-        
-        memberComboIn.setSelectedIndex(0);
     }
     //basuru
     public void tableload()
@@ -1224,7 +1222,7 @@ public class Admin extends javax.swing.JFrame {
             }
         });
 
-        memberComboIn.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Please Select", "Faculty", "Student", "Staff" }));
+        memberComboIn.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Please Select", "Faculty", "Student", "Admin" }));
         memberComboIn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 memberComboInActionPerformed(evt);
