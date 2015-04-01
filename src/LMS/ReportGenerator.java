@@ -46,7 +46,7 @@ public class ReportGenerator {
             //JasperPrint jasperprint = JasperFillManager.fillReport(jasperreport, null,con);
              JasperPrint jasperprint = JasperFillManager.fillReport(jasperreport, null, con);
              
-             //JasperViewer.viewReport(jasperprint);
+             JasperViewer.viewReport(jasperprint);
              JasperExportManager.exportReportToPdfFile(jasperprint, "src//Reports//Report.pdf"); // Location to output the pdf file
              //JasperViewer.viewReport(jasperprint);
              
