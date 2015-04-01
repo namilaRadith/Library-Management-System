@@ -14,6 +14,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import LMS.DBconnect;
+import LMS.Members;
 
 /**
  *
@@ -131,7 +132,7 @@ public class Members {
                     
                     
                     try {
-                        String sql = "UPDATE Members SET fname='"+this.fname+"',lname='"+this.lname+"',address='"+this.address+"',phone='"+this.phone+"',email='"+this.email+"',type='"+this.type+"',NoOfItemsBorrowed='"+this.noOfItemsBo+"' WHERE libraryID = '"+ LibraryID +"'";
+                        String sql = "UPDATE members SET fname='"+this.fname+"',lname='"+this.lname+"',address='"+this.address+"',phone='"+this.phone+"',email='"+this.email+"',type='"+this.type+"',NoOfItemsBorrowed='"+this.noOfItemsBo+"' WHERE libraryID = '"+ LibraryID +"'";
                         pst = con.prepareStatement(sql);
                         pst.execute();
          
