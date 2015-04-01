@@ -424,7 +424,6 @@ public class Admin extends javax.swing.JFrame {
         renew = new javax.swing.JRadioButton();
         jPanel22 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
-        jPanel13 = new javax.swing.JPanel();
         jPanel23 = new javax.swing.JPanel();
         jPanel17 = new javax.swing.JPanel();
         jLabel46 = new javax.swing.JLabel();
@@ -434,6 +433,11 @@ public class Admin extends javax.swing.JFrame {
         searchByNameIn = new javax.swing.JTextField();
         jLabel47 = new javax.swing.JLabel();
         searchMember = new javax.swing.JButton();
+        jScrollPane14 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
+        deleteMember = new javax.swing.JButton();
+        editMember = new javax.swing.JButton();
+        generateReport = new javax.swing.JButton();
         jPanel12 = new javax.swing.JPanel();
         jSeparator2 = new javax.swing.JSeparator();
         addMember = new javax.swing.JButton();
@@ -453,11 +457,6 @@ public class Admin extends javax.swing.JFrame {
         jLabel36 = new javax.swing.JLabel();
         jScrollPane16 = new javax.swing.JScrollPane();
         MemAddressIn = new javax.swing.JTextArea();
-        jScrollPane14 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
-        deleteMember = new javax.swing.JButton();
-        editMember = new javax.swing.JButton();
-        generateReport = new javax.swing.JButton();
         jPanel14 = new javax.swing.JPanel();
         jPanel16 = new javax.swing.JPanel();
         jLabel44 = new javax.swing.JLabel();
@@ -609,7 +608,7 @@ public class Admin extends javax.swing.JFrame {
                             .addGap(45, 45, 45)
                             .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 538, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addComponent(jSeparator1)))
-                .addContainerGap(659, Short.MAX_VALUE))
+                .addContainerGap(689, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -626,7 +625,7 @@ public class Admin extends javax.swing.JFrame {
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton16)
-                .addContainerGap(463, Short.MAX_VALUE))
+                .addContainerGap(490, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Search", jPanel1);
@@ -656,7 +655,7 @@ public class Admin extends javax.swing.JFrame {
                     .addComponent(jLabel3)
                     .addComponent(jLabel2)
                     .addComponent(jLabel1))
-                .addContainerGap(1174, Short.MAX_VALUE))
+                .addContainerGap(1204, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -673,7 +672,7 @@ public class Admin extends javax.swing.JFrame {
                 .addComponent(jLabel7)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel8)
-                .addContainerGap(382, Short.MAX_VALUE))
+                .addContainerGap(409, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Profile", jPanel2);
@@ -864,7 +863,7 @@ public class Admin extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 418, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jButton7)))
@@ -901,7 +900,7 @@ public class Admin extends javax.swing.JFrame {
                     .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(138, Short.MAX_VALUE))
+                .addContainerGap(165, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Check_Out", jPanel3);
@@ -1092,7 +1091,7 @@ public class Admin extends javax.swing.JFrame {
                         .addComponent(checkIn)
                         .addGap(10, 10, 10)
                         .addComponent(renew)))
-                .addContainerGap(327, Short.MAX_VALUE))
+                .addContainerGap(357, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1105,7 +1104,7 @@ public class Admin extends javax.swing.JFrame {
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(149, Short.MAX_VALUE))
+                .addContainerGap(176, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Check In", jPanel6);
@@ -1114,27 +1113,14 @@ public class Admin extends javax.swing.JFrame {
         jPanel22.setLayout(jPanel22Layout);
         jPanel22Layout.setHorizontalGroup(
             jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1336, Short.MAX_VALUE)
+            .addGap(0, 1366, Short.MAX_VALUE)
         );
         jPanel22Layout.setVerticalGroup(
             jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 592, Short.MAX_VALUE)
+            .addGap(0, 619, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Overdues", jPanel22);
-
-        jPanel13.setBorder(javax.swing.BorderFactory.createTitledBorder("Transction Details"));
-
-        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
-        jPanel13.setLayout(jPanel13Layout);
-        jPanel13Layout.setHorizontalGroup(
-            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1304, Short.MAX_VALUE)
-        );
-        jPanel13Layout.setVerticalGroup(
-            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 139, Short.MAX_VALUE)
-        );
 
         jPanel17.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(""), "Select Member"));
         jPanel17.setToolTipText("Group");
@@ -1183,6 +1169,117 @@ public class Admin extends javax.swing.JFrame {
                 searchMemberActionPerformed(evt);
             }
         });
+
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "LibraryID", "First Name", "Last Name", "Address", "Phone", "Email", "Type", "No of Items Borrowd"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Object.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jTable2.setSelectionBackground(new java.awt.Color(255, 102, 102));
+        jTable2.setSelectionForeground(new java.awt.Color(0, 0, 0));
+        jTable2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable2MouseClicked(evt);
+            }
+        });
+        jScrollPane14.setViewportView(jTable2);
+
+        deleteMember.setText("Delete Member");
+        deleteMember.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteMemberActionPerformed(evt);
+            }
+        });
+
+        editMember.setText("Edit Member");
+        editMember.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editMemberActionPerformed(evt);
+            }
+        });
+
+        generateReport.setText("Genarate Report");
+        generateReport.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                generateReportActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
+        jPanel17.setLayout(jPanel17Layout);
+        jPanel17Layout.setHorizontalGroup(
+            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel17Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(searchMember)
+                .addGap(892, 892, 892))
+            .addGroup(jPanel17Layout.createSequentialGroup()
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel17Layout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(jPanel17Layout.createSequentialGroup()
+                                .addComponent(generateReport, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(editMember, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(deleteMember))
+                            .addComponent(jScrollPane14, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 497, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel17Layout.createSequentialGroup()
+                        .addGap(32, 32, 32)
+                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRadioButton12)
+                            .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel46)
+                                .addComponent(jRadioButton11)
+                                .addComponent(jLabel47)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(searchByUserId, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
+                            .addComponent(searchByNameIn))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel17Layout.setVerticalGroup(
+            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel17Layout.createSequentialGroup()
+                        .addComponent(jRadioButton12)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel46))
+                    .addComponent(searchByUserId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jRadioButton11)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel47)
+                    .addComponent(searchByNameIn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(searchMember)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane14, javax.swing.GroupLayout.DEFAULT_SIZE, 191, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(deleteMember)
+                    .addComponent(editMember)
+                    .addComponent(generateReport))
+                .addGap(9, 9, 9))
+        );
 
         jPanel12.setBorder(javax.swing.BorderFactory.createTitledBorder("Member Data"));
 
@@ -1280,7 +1377,7 @@ public class Admin extends javax.swing.JFrame {
                                         .addComponent(jLabel37)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(NOIBIN, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 48, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel12Layout.setVerticalGroup(
@@ -1319,125 +1416,9 @@ public class Admin extends javax.swing.JFrame {
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel12Layout.createSequentialGroup()
                         .addComponent(jLabel36)
-                        .addGap(0, 84, Short.MAX_VALUE))
-                    .addComponent(jScrollPane16, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jScrollPane16))
                 .addContainerGap())
-        );
-
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
-            },
-            new String [] {
-                "LibraryID", "First Name", "Last Name", "Address", "Phone", "Email", "Type", "No of Items Borrowd"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
-        jTable2.setSelectionBackground(new java.awt.Color(255, 102, 102));
-        jTable2.setSelectionForeground(new java.awt.Color(0, 0, 0));
-        jTable2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTable2MouseClicked(evt);
-            }
-        });
-        jScrollPane14.setViewportView(jTable2);
-
-        deleteMember.setText("Delete Member");
-        deleteMember.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                deleteMemberActionPerformed(evt);
-            }
-        });
-
-        editMember.setText("Edit Member");
-        editMember.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                editMemberActionPerformed(evt);
-            }
-        });
-
-        generateReport.setText("Genarate Report");
-        generateReport.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                generateReportActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
-        jPanel17.setLayout(jPanel17Layout);
-        jPanel17Layout.setHorizontalGroup(
-            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel17Layout.createSequentialGroup()
-                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel17Layout.createSequentialGroup()
-                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel17Layout.createSequentialGroup()
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(searchMember))
-                            .addGroup(jPanel17Layout.createSequentialGroup()
-                                .addGap(32, 32, 32)
-                                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jRadioButton12)
-                                    .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jLabel46)
-                                        .addComponent(jRadioButton11)
-                                        .addComponent(jLabel47)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(searchByUserId, javax.swing.GroupLayout.DEFAULT_SIZE, 293, Short.MAX_VALUE)
-                                    .addComponent(searchByNameIn))))
-                        .addGap(56, 56, 56))
-                    .addGroup(jPanel17Layout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel17Layout.createSequentialGroup()
-                                .addComponent(generateReport, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(editMember, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(deleteMember))
-                            .addComponent(jScrollPane14))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        jPanel17Layout.setVerticalGroup(
-            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel17Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel17Layout.createSequentialGroup()
-                        .addComponent(jRadioButton12)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel46))
-                    .addComponent(searchByUserId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jRadioButton11)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel47)
-                    .addComponent(searchByNameIn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(searchMember)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane14, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(deleteMember)
-                    .addComponent(editMember)
-                    .addComponent(generateReport))
-                .addGap(9, 9, 9))
-            .addComponent(jPanel12, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel23Layout = new javax.swing.GroupLayout(jPanel23);
@@ -1445,42 +1426,38 @@ public class Admin extends javax.swing.JFrame {
         jPanel23Layout.setHorizontalGroup(
             jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel23Layout.createSequentialGroup()
-                .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 20, Short.MAX_VALUE))
+                .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, 506, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel23Layout.setVerticalGroup(
             jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel23Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(166, Short.MAX_VALUE))
+                .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel23Layout.createSequentialGroup()
+                        .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jPanel12, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel7Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(412, 412, 412)
-                .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(18, Short.MAX_VALUE))
-            .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel7Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 184, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Members", jPanel7);
@@ -1826,7 +1803,7 @@ public class Admin extends javax.swing.JFrame {
                         .addComponent(editionIn, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(10, 10, 10)
                         .addComponent(removeBookButton)))
-                .addContainerGap(107, Short.MAX_VALUE))
+                .addContainerGap(137, Short.MAX_VALUE))
         );
         jPanel18Layout.setVerticalGroup(
             jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1952,7 +1929,7 @@ public class Admin extends javax.swing.JFrame {
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(142, Short.MAX_VALUE))
+                .addContainerGap(169, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Resources", jPanel14);
@@ -2065,7 +2042,7 @@ public class Admin extends javax.swing.JFrame {
                     .addComponent(jLabel61, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField31, javax.swing.GroupLayout.DEFAULT_SIZE, 288, Short.MAX_VALUE)
+                    .addComponent(jTextField31, javax.swing.GroupLayout.DEFAULT_SIZE, 318, Short.MAX_VALUE)
                     .addComponent(jTextField33, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jTextField34, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
@@ -2236,8 +2213,8 @@ public class Admin extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(6, 6, 6)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 620, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 647, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -2643,81 +2620,135 @@ public class Admin extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jButton16ActionPerformed
 
-    private void jRadioButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton11ActionPerformed
-        searchByUserId.setEditable(false);
-        searchByNameIn.setEditable(true);
-        searchMember.setEnabled(true);
-        clearFields();
-    }//GEN-LAST:event_jRadioButton11ActionPerformed
+    private void generateReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generateReportActionPerformed
+        /**
+        *
+        * @reportGenerator Calls the Genarate report function
+        */
+        HashMap parameter = new HashMap();
+        parameter.put("MemberType", "Admin");
 
-    private void jRadioButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton12ActionPerformed
-        searchByNameIn.setEditable(false);
-        searchByUserId.setEditable(true);
-        searchMember.setEnabled(true);
-        clearFields();
-    }//GEN-LAST:event_jRadioButton12ActionPerformed
+        ReportGenerator RP = new ReportGenerator();
+        RP.generateReport();
+        RP.generateParameterizedReport(parameter);
+    }//GEN-LAST:event_generateReportActionPerformed
 
-    private void searchByUserIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchByUserIdActionPerformed
+    private void editMemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editMemberActionPerformed
+        updateMember.setEnabled(true);
+        addMember.setEnabled(false);
 
-    }//GEN-LAST:event_searchByUserIdActionPerformed
+        rowCount = jTable2.getSelectedRow();
 
-    private void searchByUserIdFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_searchByUserIdFocusGained
-        searchMember.setEnabled(true);
-    }//GEN-LAST:event_searchByUserIdFocusGained
+        LibraryID = jTable2.getValueAt(rowCount, 0).toString();
+        fnameIn.setText(jTable2.getValueAt(rowCount, 1).toString());
+        lnameIn.setText(jTable2.getValueAt(rowCount,2).toString());
+        MemAddressIn.setText(jTable2.getValueAt(rowCount,3).toString());
+        phoneIn.setText(jTable2.getValueAt(rowCount,4).toString());
+        emailIn.setText(jTable2.getValueAt(rowCount,5).toString());
+        memberComboIn.setSelectedItem(jTable2.getValueAt(rowCount,6).toString());
+        NOIBIN.setText(jTable2.getValueAt(rowCount,7).toString());
+    }//GEN-LAST:event_editMemberActionPerformed
 
-    private void searchByNameInKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchByNameInKeyPressed
-        //        Members M2 = new Members();
-        //        M2.searchMember(searchByNameIn.getText());
-        //          try {
-            //            String sql = "SELECT * FROM Members WHERE fname LIKE '%"+searchByNameIn.getText()+"%'";
-            //            pst = con.prepareStatement(sql);
-            //            rs = pst.executeQuery();
-            //
-            //        } catch (SQLException ex) {
-            //            Logger.getLogger(Members.class.getName()).log(Level.SEVERE, null, ex);
-            //        }
-        //        jTable2.setModel(DbUtils.resultSetToTableModel(rs));
+    private void deleteMemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteMemberActionPerformed
+        Members M1 = new Members();
+        rowCount = jTable2.getSelectedRow();
 
-    }//GEN-LAST:event_searchByNameInKeyPressed
-
-    private void searchMemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchMemberActionPerformed
-        if(jRadioButton11.isSelected())
+        LibraryID = jTable2.getValueAt(rowCount, 0).toString();
+        if(LibraryID==""|| LibraryID==null)
         {
-            try {
-                String sql = "SELECT * FROM Members WHERE fname LIKE '%"+searchByNameIn.getText()+"%'";
-                pst = con.prepareStatement(sql);
-                rs = pst.executeQuery();
-
-            } catch (SQLException ex) {
-                Logger.getLogger(Members.class.getName()).log(Level.SEVERE, null, ex);
-            }
-
-            jTable2.setModel(DbUtils.resultSetToTableModel(rs));
+            JOptionPane.showMessageDialog(null, "You must Select a Member to Delete");
         }
-
-        if(jRadioButton12.isSelected())
+        else
         {
-            String userId = searchByUserId.getText();
-            String newuserID = "";
-            int length = userId.length();
-            for(int i = 0;i<length;i++)
+            int selection = JOptionPane.showConfirmDialog(null, "Are you sure you want to delete this Member ? ","Delete Member",1);
+            if (selection==0)
             {
-                if(Character.isDigit(userId.charAt(i)))
-                {
-                    newuserID+=userId.charAt(i);
-                }
+                JOptionPane.showMessageDialog(null, M1.deleteMember(LibraryID));
+                clearFields();
+                tableload();
             }
-            try {
-                String sql = "SELECT * FROM Members WHERE libraryID='"+newuserID+"'";
-                pst = con.prepareStatement(sql);
-                rs = pst.executeQuery();
 
-            } catch (SQLException ex) {
-                Logger.getLogger(Members.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            jTable2.setModel(DbUtils.resultSetToTableModel(rs));
         }
-    }//GEN-LAST:event_searchMemberActionPerformed
+    }//GEN-LAST:event_deleteMemberActionPerformed
+
+    private void jTable2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable2MouseClicked
+        deleteMember.setEnabled(true);
+        editMember.setEnabled(true);
+    }//GEN-LAST:event_jTable2MouseClicked
+
+    private void memberComboInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_memberComboInActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_memberComboInActionPerformed
+
+    private void NOIBINActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NOIBINActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NOIBINActionPerformed
+
+    private void fnameInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fnameInActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fnameInActionPerformed
+
+    private void updateMemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateMemberActionPerformed
+        addMember.setEnabled(true);
+
+        String firstName = fnameIn.getText();
+        String lastName = lnameIn.getText();
+        String email = emailIn.getText();
+        String phone = phoneIn.getText();
+        String MemType = memberComboIn.getSelectedItem().toString();
+        String Address = MemAddressIn.getText();
+        String noOfItemsBo = NOIBIN.getText();
+
+        String regex="^[a-zA-Z ]+$";
+        String regexemail="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$";
+        String regexphone="^[0-9]+$";
+        String regexuser="^[0-9a-zA-Z]+$";
+        String regexadd="^[0-9a-zA-Z ,]+$";
+
+        if(!firstName.matches(regex))
+        {
+            JOptionPane.showMessageDialog(null,"The Name should be Letters" );
+
+        }else if(!lastName.matches(regex))
+        {
+            JOptionPane.showMessageDialog(null,"The Last Name should be Letters" );
+
+        }else if(!email.matches(regexemail))
+        {
+            JOptionPane.showMessageDialog(null,"The Email is not valid" );
+
+        }else if(!phone.matches(regexphone))
+        {
+            JOptionPane.showMessageDialog(null,"Phone number should only be numbers" );
+
+        }else if(!MemType.matches(regex)||MemType.equals("Please Select"))
+        {
+            JOptionPane.showMessageDialog(null,"The Member Type should be filled" );
+
+        }else if(!Address.matches(regexadd))
+        {
+            JOptionPane.showMessageDialog(null,"The Address should contain letters and numbers" );
+
+        }else if(!noOfItemsBo.matches(regexphone))
+        {
+            JOptionPane.showMessageDialog(null,"No of borrowed items should only contain numbers numbers" );
+        }
+        else
+        {
+            int x = JOptionPane.showConfirmDialog(null, "Are you Sure you want to Update the currunt Member ?", "Update Member", WIDTH);
+            if(x==0)
+            {
+                int noOfItems = Integer.parseInt(noOfItemsBo);
+                Members M4 = new Members(firstName, lastName, Address, email, phone, MemType, noOfItems);
+                updateMember.setEnabled(false);
+                clearFields();
+                JOptionPane.showMessageDialog(null, M4.editMember(LibraryID),"Update Completed",WIDTH);
+                tableload();
+                jTable2.setRowSelectionInterval(rowCount,rowCount);
+            }
+
+        }
+    }//GEN-LAST:event_updateMemberActionPerformed
 
     private void addMemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addMemberActionPerformed
         /**
@@ -2783,142 +2814,82 @@ public class Admin extends javax.swing.JFrame {
             // clears the text fields
             clearFields();
         }
-
     }//GEN-LAST:event_addMemberActionPerformed
 
-    private void updateMemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateMemberActionPerformed
-        addMember.setEnabled(true);
-
-        String firstName = fnameIn.getText();
-        String lastName = lnameIn.getText();
-        String email = emailIn.getText();
-        String phone = phoneIn.getText();
-        String MemType = memberComboIn.getSelectedItem().toString();
-        String Address = MemAddressIn.getText();
-        String noOfItemsBo = NOIBIN.getText();
-
-        String regex="^[a-zA-Z ]+$";
-        String regexemail="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$";
-        String regexphone="^[0-9]+$";
-        String regexuser="^[0-9a-zA-Z]+$";
-        String regexadd="^[0-9a-zA-Z ,]+$";
-
-        if(!firstName.matches(regex))
+    private void searchMemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchMemberActionPerformed
+        if(jRadioButton11.isSelected())
         {
-            JOptionPane.showMessageDialog(null,"The Name should be Letters" );
+            try {
+                String sql = "SELECT * FROM Members WHERE fname LIKE '%"+searchByNameIn.getText()+"%'";
+                pst = con.prepareStatement(sql);
+                rs = pst.executeQuery();
 
-        }else if(!lastName.matches(regex))
-        {
-            JOptionPane.showMessageDialog(null,"The Last Name should be Letters" );
-
-        }else if(!email.matches(regexemail))
-        {
-            JOptionPane.showMessageDialog(null,"The Email is not valid" );
-
-        }else if(!phone.matches(regexphone))
-        {
-            JOptionPane.showMessageDialog(null,"Phone number should only be numbers" );
-
-        }else if(!MemType.matches(regex)||MemType.equals("Please Select"))
-        {
-            JOptionPane.showMessageDialog(null,"The Member Type should be filled" );
-
-        }else if(!Address.matches(regexadd))
-        {
-            JOptionPane.showMessageDialog(null,"The Address should contain letters and numbers" );
-
-        }else if(!noOfItemsBo.matches(regexphone))
-        {
-            JOptionPane.showMessageDialog(null,"No of borrowed items should only contain numbers numbers" );
-        }
-        else
-        {
-            int x = JOptionPane.showConfirmDialog(null, "Are you Sure you want to Update the currunt Member ?", "Update Member", WIDTH);
-            if(x==0)
-            {
-                int noOfItems = Integer.parseInt(noOfItemsBo);
-                Members M4 = new Members(firstName, lastName, Address, email, phone, MemType, noOfItems);
-                updateMember.setEnabled(false);
-                clearFields();
-                JOptionPane.showMessageDialog(null, M4.editMember(LibraryID),"Update Completed",WIDTH);
-                tableload();
-                jTable2.setRowSelectionInterval(rowCount,rowCount);
+            } catch (SQLException ex) {
+                Logger.getLogger(Members.class.getName()).log(Level.SEVERE, null, ex);
             }
 
+            jTable2.setModel(DbUtils.resultSetToTableModel(rs));
         }
 
-    }//GEN-LAST:event_updateMemberActionPerformed
-
-    private void fnameInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fnameInActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_fnameInActionPerformed
-
-    private void NOIBINActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NOIBINActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_NOIBINActionPerformed
-
-    private void memberComboInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_memberComboInActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_memberComboInActionPerformed
-
-    private void jTable2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable2MouseClicked
-        deleteMember.setEnabled(true);
-        editMember.setEnabled(true);
-
-    }//GEN-LAST:event_jTable2MouseClicked
-
-    private void deleteMemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteMemberActionPerformed
-        Members M1 = new Members();
-        rowCount = jTable2.getSelectedRow();
-
-        LibraryID = jTable2.getValueAt(rowCount, 0).toString();
-        if(LibraryID==""|| LibraryID==null)
+        if(jRadioButton12.isSelected())
         {
-            JOptionPane.showMessageDialog(null, "You must Select a Member to Delete");
-        }
-        else
-        {
-            int selection = JOptionPane.showConfirmDialog(null, "Are you sure you want to delete this Member ? ","Delete Member",1);
-            if (selection==0)
+            String userId = searchByUserId.getText();
+            String newuserID = "";
+            int length = userId.length();
+            for(int i = 0;i<length;i++)
             {
-                JOptionPane.showMessageDialog(null, M1.deleteMember(LibraryID));
-                clearFields();
-                tableload();
+                if(Character.isDigit(userId.charAt(i)))
+                {
+                    newuserID+=userId.charAt(i);
+                }
             }
+            try {
+                String sql = "SELECT * FROM Members WHERE libraryID='"+newuserID+"'";
+                pst = con.prepareStatement(sql);
+                rs = pst.executeQuery();
 
+            } catch (SQLException ex) {
+                Logger.getLogger(Members.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            jTable2.setModel(DbUtils.resultSetToTableModel(rs));
         }
+    }//GEN-LAST:event_searchMemberActionPerformed
 
-    }//GEN-LAST:event_deleteMemberActionPerformed
+    private void searchByNameInKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchByNameInKeyPressed
+        //        Members M2 = new Members();
+        //        M2.searchMember(searchByNameIn.getText());
+        //          try {
+            //            String sql = "SELECT * FROM Members WHERE fname LIKE '%"+searchByNameIn.getText()+"%'";
+            //            pst = con.prepareStatement(sql);
+            //            rs = pst.executeQuery();
+            //
+            //        } catch (SQLException ex) {
+            //            Logger.getLogger(Members.class.getName()).log(Level.SEVERE, null, ex);
+            //        }
+        //        jTable2.setModel(DbUtils.resultSetToTableModel(rs));
+    }//GEN-LAST:event_searchByNameInKeyPressed
 
-    private void editMemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editMemberActionPerformed
-        updateMember.setEnabled(true);
-        addMember.setEnabled(false);
+    private void searchByUserIdFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_searchByUserIdFocusGained
+        searchMember.setEnabled(true);
+    }//GEN-LAST:event_searchByUserIdFocusGained
 
-        rowCount = jTable2.getSelectedRow();
+    private void searchByUserIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchByUserIdActionPerformed
 
-        LibraryID = jTable2.getValueAt(rowCount, 0).toString();
-        fnameIn.setText(jTable2.getValueAt(rowCount, 1).toString());
-        lnameIn.setText(jTable2.getValueAt(rowCount,2).toString());
-        MemAddressIn.setText(jTable2.getValueAt(rowCount,3).toString());
-        phoneIn.setText(jTable2.getValueAt(rowCount,4).toString());
-        emailIn.setText(jTable2.getValueAt(rowCount,5).toString());
-        memberComboIn.setSelectedItem(jTable2.getValueAt(rowCount,6).toString());
-        NOIBIN.setText(jTable2.getValueAt(rowCount,7).toString());
-    }//GEN-LAST:event_editMemberActionPerformed
+    }//GEN-LAST:event_searchByUserIdActionPerformed
 
-    private void generateReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generateReportActionPerformed
-        /**
-        *
-        * @reportGenerator Calls the Genarate report function
-        */
-        HashMap parameter = new HashMap();
-        parameter.put("MemberType", "Admin");
+    private void jRadioButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton12ActionPerformed
+        searchByNameIn.setEditable(false);
+        searchByUserId.setEditable(true);
+        searchMember.setEnabled(true);
+        clearFields();
+    }//GEN-LAST:event_jRadioButton12ActionPerformed
 
-        ReportGenerator RP = new ReportGenerator();
-        RP.generateReport();
-        RP.generateParameterizedReport(parameter);
-
-    }//GEN-LAST:event_generateReportActionPerformed
+    private void jRadioButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton11ActionPerformed
+        searchByUserId.setEditable(false);
+        searchByNameIn.setEditable(true);
+        searchMember.setEnabled(true);
+        clearFields();
+    }//GEN-LAST:event_jRadioButton11ActionPerformed
 
 
 
@@ -3079,7 +3050,6 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
-    private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
