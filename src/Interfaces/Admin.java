@@ -64,7 +64,8 @@ public class Admin extends javax.swing.JFrame {
         con = DBconnect.connect();
         //this hide the renew group when page load 
         hideGroup(jPanel9, jPanel10);
-
+       // ReportPanal.hide();
+        
         tableload();
         hideButtons();
 
@@ -151,6 +152,8 @@ public class Admin extends javax.swing.JFrame {
         removeBookButton.setEnabled(false);
         updateMember.setEnabled(false);
         deleteMember.setEnabled(false);
+        paramReportIn.setEnabled(false);
+        generateReport.setEnabled(false);
         
 
     }
@@ -438,7 +441,6 @@ public class Admin extends javax.swing.JFrame {
         jTable2 = new javax.swing.JTable();
         deleteMember = new javax.swing.JButton();
         editMember = new javax.swing.JButton();
-        generateReport = new javax.swing.JButton();
         jPanel12 = new javax.swing.JPanel();
         jSeparator2 = new javax.swing.JSeparator();
         addMember = new javax.swing.JButton();
@@ -458,7 +460,13 @@ public class Admin extends javax.swing.JFrame {
         jLabel36 = new javax.swing.JLabel();
         jScrollPane16 = new javax.swing.JScrollPane();
         MemAddressIn = new javax.swing.JTextArea();
-        ResetFeilds = new javax.swing.JButton();
+        jButton17 = new javax.swing.JButton();
+        ReportPanal = new javax.swing.JPanel();
+        generateReport = new javax.swing.JButton();
+        NormalReport = new javax.swing.JRadioButton();
+        ParamReport = new javax.swing.JRadioButton();
+        jLabel33 = new javax.swing.JLabel();
+        paramReportIn = new javax.swing.JComboBox();
         jPanel14 = new javax.swing.JPanel();
         jPanel16 = new javax.swing.JPanel();
         jLabel44 = new javax.swing.JLabel();
@@ -610,7 +618,7 @@ public class Admin extends javax.swing.JFrame {
                             .addGap(45, 45, 45)
                             .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 538, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addComponent(jSeparator1)))
-                .addContainerGap(689, Short.MAX_VALUE))
+                .addContainerGap(641, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -657,7 +665,7 @@ public class Admin extends javax.swing.JFrame {
                     .addComponent(jLabel3)
                     .addComponent(jLabel2)
                     .addComponent(jLabel1))
-                .addContainerGap(1204, Short.MAX_VALUE))
+                .addContainerGap(1156, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -865,7 +873,7 @@ public class Admin extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 418, Short.MAX_VALUE)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 370, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jButton7)))
@@ -1093,7 +1101,7 @@ public class Admin extends javax.swing.JFrame {
                         .addComponent(checkIn)
                         .addGap(10, 10, 10)
                         .addComponent(renew)))
-                .addContainerGap(357, Short.MAX_VALUE))
+                .addContainerGap(309, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1115,7 +1123,7 @@ public class Admin extends javax.swing.JFrame {
         jPanel22.setLayout(jPanel22Layout);
         jPanel22Layout.setHorizontalGroup(
             jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1366, Short.MAX_VALUE)
+            .addGap(0, 1318, Short.MAX_VALUE)
         );
         jPanel22Layout.setVerticalGroup(
             jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1214,13 +1222,6 @@ public class Admin extends javax.swing.JFrame {
             }
         });
 
-        generateReport.setText("Genarate Report");
-        generateReport.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                generateReportActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
         jPanel17.setLayout(jPanel17Layout);
         jPanel17Layout.setHorizontalGroup(
@@ -1233,14 +1234,12 @@ public class Admin extends javax.swing.JFrame {
                 .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel17Layout.createSequentialGroup()
                         .addGap(1, 1, 1)
-                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(jPanel17Layout.createSequentialGroup()
-                                .addComponent(generateReport, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
                                 .addComponent(editMember, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(deleteMember))
-                            .addComponent(jScrollPane14, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 497, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jScrollPane14, javax.swing.GroupLayout.PREFERRED_SIZE, 497, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel17Layout.createSequentialGroup()
                         .addGap(32, 32, 32)
                         .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1274,12 +1273,11 @@ public class Admin extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(searchMember)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane14, javax.swing.GroupLayout.DEFAULT_SIZE, 191, Short.MAX_VALUE)
+                .addComponent(jScrollPane14, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(deleteMember)
-                    .addComponent(editMember)
-                    .addComponent(generateReport))
+                    .addComponent(editMember))
                 .addGap(9, 9, 9))
         );
 
@@ -1336,10 +1334,10 @@ public class Admin extends javax.swing.JFrame {
         MemAddressIn.setRows(5);
         jScrollPane16.setViewportView(MemAddressIn);
 
-        ResetFeilds.setText("Reset");
-        ResetFeilds.addActionListener(new java.awt.event.ActionListener() {
+        jButton17.setText("Reset");
+        jButton17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ResetFeildsActionPerformed(evt);
+                jButton17ActionPerformed(evt);
             }
         });
 
@@ -1388,7 +1386,7 @@ public class Admin extends javax.swing.JFrame {
                                         .addComponent(jLabel37)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(NOIBIN, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(ResetFeilds, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                    .addComponent(jButton17, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addContainerGap())
         );
         jPanel12Layout.setVerticalGroup(
@@ -1419,9 +1417,13 @@ public class Admin extends javax.swing.JFrame {
                     .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel37)
                         .addComponent(NOIBIN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel12Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jButton17)
+                        .addContainerGap())
+                    .addGroup(jPanel12Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
                         .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel32)
                             .addComponent(phoneIn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1429,12 +1431,9 @@ public class Admin extends javax.swing.JFrame {
                         .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel12Layout.createSequentialGroup()
                                 .addComponent(jLabel36)
-                                .addGap(0, 0, Short.MAX_VALUE))
+                                .addGap(144, 144, 144))
                             .addComponent(jScrollPane16))
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(ResetFeilds))))
+                        .addGap(4, 4, 4))))
         );
 
         javax.swing.GroupLayout jPanel23Layout = new javax.swing.GroupLayout(jPanel23);
@@ -1457,21 +1456,108 @@ public class Admin extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        ReportPanal.setBorder(javax.swing.BorderFactory.createTitledBorder("Report"));
+
+        generateReport.setText("Generate");
+        generateReport.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                generateReportActionPerformed(evt);
+            }
+        });
+
+        NormalReport.setText("Normal Report");
+        NormalReport.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NormalReportActionPerformed(evt);
+            }
+        });
+
+        ParamReport.setText("Parameterized Report");
+        ParamReport.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                ParamReportStateChanged(evt);
+            }
+        });
+        ParamReport.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ParamReportActionPerformed(evt);
+            }
+        });
+        ParamReport.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                ParamReportFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                ParamReportFocusLost(evt);
+            }
+        });
+        ParamReport.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                ParamReportPropertyChange(evt);
+            }
+        });
+
+        jLabel33.setText("Member Type :");
+
+        paramReportIn.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Please Select", "Student", "Staff", "Faculty" }));
+
+        javax.swing.GroupLayout ReportPanalLayout = new javax.swing.GroupLayout(ReportPanal);
+        ReportPanal.setLayout(ReportPanalLayout);
+        ReportPanalLayout.setHorizontalGroup(
+            ReportPanalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ReportPanalLayout.createSequentialGroup()
+                .addGroup(ReportPanalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ReportPanalLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(generateReport, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(ReportPanalLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(ReportPanalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(ParamReport)
+                            .addComponent(NormalReport))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(ReportPanalLayout.createSequentialGroup()
+                .addGap(62, 62, 62)
+                .addComponent(jLabel33)
+                .addGap(18, 18, 18)
+                .addComponent(paramReportIn, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(244, Short.MAX_VALUE))
+        );
+        ReportPanalLayout.setVerticalGroup(
+            ReportPanalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ReportPanalLayout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(NormalReport)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(ParamReport)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(ReportPanalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel33)
+                    .addComponent(paramReportIn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                .addComponent(generateReport))
+        );
+
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(0, 47, Short.MAX_VALUE)
-                .addComponent(jPanel23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ReportPanal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(0, 1, Short.MAX_VALUE)
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jPanel23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 184, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ReportPanal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Members", jPanel7);
@@ -1817,7 +1903,7 @@ public class Admin extends javax.swing.JFrame {
                         .addComponent(editionIn, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(10, 10, 10)
                         .addComponent(removeBookButton)))
-                .addContainerGap(137, Short.MAX_VALUE))
+                .addContainerGap(89, Short.MAX_VALUE))
         );
         jPanel18Layout.setVerticalGroup(
             jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2056,7 +2142,7 @@ public class Admin extends javax.swing.JFrame {
                     .addComponent(jLabel61, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField31, javax.swing.GroupLayout.DEFAULT_SIZE, 318, Short.MAX_VALUE)
+                    .addComponent(jTextField31, javax.swing.GroupLayout.DEFAULT_SIZE, 270, Short.MAX_VALUE)
                     .addComponent(jTextField33, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jTextField34, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
@@ -2214,7 +2300,7 @@ public class Admin extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jLabel53)
-                        .addGap(214, 214, 214)
+                        .addGap(219, 219, 219)
                         .addComponent(jButton36)
                         .addGap(22, 22, 22))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -2231,7 +2317,7 @@ public class Admin extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButton36)
                     .addComponent(jLabel53))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -2638,13 +2724,33 @@ public class Admin extends javax.swing.JFrame {
         /**
         *
         * @reportGenerator Calls the Genarate report function
+        * @author Basuru
         */
-        HashMap parameter = new HashMap();
-        parameter.put("MemberType", "Admin");
-
         ReportGenerator RP = new ReportGenerator();
-        RP.generateReport();
-        RP.generateParameterizedReport(parameter);
+        if(NormalReport.isSelected())
+        {
+            RP.generateReport();
+        }
+        else if(ParamReport.isSelected())
+        {
+            if(paramReportIn.getSelectedItem().toString()!="Please Select")
+            {
+                String Param = paramReportIn.getSelectedItem().toString();
+            
+                HashMap parameter = new HashMap();
+                parameter.put("MemberType", Param);
+                RP.generateParameterizedReport(parameter);
+            }
+            else
+            {
+                JOptionPane.showMessageDialog(null, "Please Select a member Type","Error",WIDTH);
+            }
+        
+        }
+
+        
+        
+        
     }//GEN-LAST:event_generateReportActionPerformed
 
     private void editMemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editMemberActionPerformed
@@ -2905,9 +3011,53 @@ public class Admin extends javax.swing.JFrame {
         clearFields();
     }//GEN-LAST:event_jRadioButton11ActionPerformed
 
-    private void ResetFeildsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ResetFeildsActionPerformed
+    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
         clearFields();
-    }//GEN-LAST:event_ResetFeildsActionPerformed
+    }//GEN-LAST:event_jButton17ActionPerformed
+
+    private void NormalReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NormalReportActionPerformed
+        if(NormalReport.isSelected())
+          {
+             
+              generateReport.setEnabled(true);
+          }
+          else
+          {
+              
+              generateReport.setEnabled(false);
+          }
+    }//GEN-LAST:event_NormalReportActionPerformed
+
+    private void ParamReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ParamReportActionPerformed
+          
+          if(ParamReport.isSelected())
+          {
+              paramReportIn.setEnabled(true);
+              generateReport.setEnabled(true);
+          }
+          else
+          {
+              paramReportIn.setEnabled(false);
+              generateReport.setEnabled(false);
+          }
+       
+    }//GEN-LAST:event_ParamReportActionPerformed
+
+    private void ParamReportFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_ParamReportFocusGained
+        
+    }//GEN-LAST:event_ParamReportFocusGained
+
+    private void ParamReportFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_ParamReportFocusLost
+       
+    }//GEN-LAST:event_ParamReportFocusLost
+
+    private void ParamReportStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_ParamReportStateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ParamReportStateChanged
+
+    private void ParamReportPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_ParamReportPropertyChange
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ParamReportPropertyChange
 
 
 
@@ -2950,7 +3100,9 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JLabel ItemNoLable;
     private javax.swing.JTextArea MemAddressIn;
     private javax.swing.JTextField NOIBIN;
-    private javax.swing.JButton ResetFeilds;
+    private javax.swing.JRadioButton NormalReport;
+    private javax.swing.JRadioButton ParamReport;
+    private javax.swing.JPanel ReportPanal;
     private javax.swing.ButtonGroup SearchByGroup;
     private javax.swing.JTextField aFirstNameIn;
     private javax.swing.JTextField aSecondNameIn;
@@ -2977,6 +3129,7 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton25;
     private javax.swing.JButton jButton26;
@@ -3021,6 +3174,7 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
@@ -3137,6 +3291,7 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JTextField lnameIn;
     private javax.swing.JComboBox memberComboIn;
     private javax.swing.JTextField noOfCopiesIn;
+    private javax.swing.JComboBox paramReportIn;
     private javax.swing.JTextField phoneIn;
     private javax.swing.JRadioButton publishedBookRadio;
     private javax.swing.JTextField publishedBookYearIn;

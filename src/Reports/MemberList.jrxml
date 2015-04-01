@@ -37,13 +37,13 @@ FROM Members]]>
 	<title>
 		<band height="72">
 			<frame>
-				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="d66a7532-7343-4b10-bb85-8fbc489127e5"/>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006666" uuid="d66a7532-7343-4b10-bb85-8fbc489127e5"/>
 				<staticText>
 					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="b205b03f-9739-4a86-959f-e0ad5e9cae95"/>
 					<textElement>
 						<font size="34" isBold="true"/>
 					</textElement>
-					<text><![CDATA[Members]]></text>
+					<text><![CDATA[Report]]></text>
 				</staticText>
 				<staticText>
 					<reportElement x="395" y="43" width="180" height="20" forecolor="#FFFFFF" uuid="ef95eb89-ba53-4bd0-9d60-f542e29d7587"/>
@@ -51,6 +51,10 @@ FROM Members]]>
 						<font size="14" isBold="false"/>
 					</textElement>
 					<text><![CDATA[List of all the Members]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="20" y="72" width="100" height="20" uuid="a54e3e29-ffad-49ea-a548-d2d85076e8fd"/>
+					<text><![CDATA[Report Type : Normal]]></text>
 				</staticText>
 			</frame>
 		</band>
