@@ -545,6 +545,7 @@ public class Admin extends javax.swing.JFrame {
         jMenuBar4 = new javax.swing.JMenuBar();
         jMenu8 = new javax.swing.JMenu();
         jMenu9 = new javax.swing.JMenu();
+        jMenu11 = new javax.swing.JMenu();
 
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
@@ -567,9 +568,11 @@ public class Admin extends javax.swing.JFrame {
         jMenuBar3.add(jMenu7);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Library Management System");
 
         jTabbedPane1.setBackground(new java.awt.Color(153, 0, 204));
         jTabbedPane1.setTabLayoutPolicy(javax.swing.JTabbedPane.SCROLL_TAB_LAYOUT);
+        jTabbedPane1.setFont(jTabbedPane1.getFont().deriveFont(jTabbedPane1.getFont().getStyle() | java.awt.Font.BOLD, jTabbedPane1.getFont().getSize()+1));
         jTabbedPane1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTabbedPane1MouseClicked(evt);
@@ -609,7 +612,7 @@ public class Admin extends javax.swing.JFrame {
                             .addGap(45, 45, 45)
                             .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 538, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addComponent(jSeparator1)))
-                .addContainerGap(659, Short.MAX_VALUE))
+                .addContainerGap(671, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -626,10 +629,10 @@ public class Admin extends javax.swing.JFrame {
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton16)
-                .addContainerGap(463, Short.MAX_VALUE))
+                .addContainerGap(445, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Search", jPanel1);
+        jTabbedPane1.addTab("Search  ", new javax.swing.ImageIcon("C:\\Users\\Namila Radith\\Documents\\NetBeansProjects\\Library-Management-System\\icons\\Search-icon.png"), jPanel1); // NOI18N
 
         jLabel1.setText("First Name : ");
 
@@ -656,7 +659,7 @@ public class Admin extends javax.swing.JFrame {
                     .addComponent(jLabel3)
                     .addComponent(jLabel2)
                     .addComponent(jLabel1))
-                .addContainerGap(1174, Short.MAX_VALUE))
+                .addContainerGap(1186, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -673,7 +676,7 @@ public class Admin extends javax.swing.JFrame {
                 .addComponent(jLabel7)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel8)
-                .addContainerGap(382, Short.MAX_VALUE))
+                .addContainerGap(364, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Profile", jPanel2);
@@ -864,7 +867,7 @@ public class Admin extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jButton7)))
@@ -901,10 +904,10 @@ public class Admin extends javax.swing.JFrame {
                     .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(138, Short.MAX_VALUE))
+                .addContainerGap(120, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Check_Out", jPanel3);
+        jTabbedPane1.addTab("Check Out  ", new javax.swing.ImageIcon("C:\\Users\\Namila Radith\\Documents\\NetBeansProjects\\Library-Management-System\\icons\\out.png"), jPanel3); // NOI18N
 
         jPanel9.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(""), "Check In Details"));
         jPanel9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -1092,7 +1095,7 @@ public class Admin extends javax.swing.JFrame {
                         .addComponent(checkIn)
                         .addGap(10, 10, 10)
                         .addComponent(renew)))
-                .addContainerGap(327, Short.MAX_VALUE))
+                .addContainerGap(339, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1105,23 +1108,23 @@ public class Admin extends javax.swing.JFrame {
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(149, Short.MAX_VALUE))
+                .addContainerGap(131, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Check In", jPanel6);
+        jTabbedPane1.addTab("Check In  ", new javax.swing.ImageIcon("C:\\Users\\Namila Radith\\Documents\\NetBeansProjects\\Library-Management-System\\icons\\IN.png"), jPanel6); // NOI18N
 
         javax.swing.GroupLayout jPanel22Layout = new javax.swing.GroupLayout(jPanel22);
         jPanel22.setLayout(jPanel22Layout);
         jPanel22Layout.setHorizontalGroup(
             jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1336, Short.MAX_VALUE)
+            .addGap(0, 1348, Short.MAX_VALUE)
         );
         jPanel22Layout.setVerticalGroup(
             jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 592, Short.MAX_VALUE)
+            .addGap(0, 574, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("Overdues", jPanel22);
+        jTabbedPane1.addTab("Overdues  ", new javax.swing.ImageIcon("C:\\Users\\Namila Radith\\Documents\\NetBeansProjects\\Library-Management-System\\icons\\overdue.png"), jPanel22); // NOI18N
 
         jPanel13.setBorder(javax.swing.BorderFactory.createTitledBorder("Transction Details"));
 
@@ -1129,11 +1132,22 @@ public class Admin extends javax.swing.JFrame {
         jPanel13.setLayout(jPanel13Layout);
         jPanel13Layout.setHorizontalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1304, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 139, Short.MAX_VALUE)
+            .addGap(0, 86, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jPanel23Layout = new javax.swing.GroupLayout(jPanel23);
+        jPanel23.setLayout(jPanel23Layout);
+        jPanel23Layout.setHorizontalGroup(
+            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1336, Short.MAX_VALUE)
+        );
+        jPanel23Layout.setVerticalGroup(
+            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 498, Short.MAX_VALUE)
         );
 
         jPanel17.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(""), "Select Member"));
@@ -1440,29 +1454,17 @@ public class Admin extends javax.swing.JFrame {
             .addComponent(jPanel12, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout jPanel23Layout = new javax.swing.GroupLayout(jPanel23);
-        jPanel23.setLayout(jPanel23Layout);
-        jPanel23Layout.setHorizontalGroup(
-            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel23Layout.createSequentialGroup()
-                .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 20, Short.MAX_VALUE))
-        );
-        jPanel23Layout.setVerticalGroup(
-            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel23Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(166, Short.MAX_VALUE))
-        );
-
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+            .addGroup(jPanel7Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
             .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel7Layout.createSequentialGroup()
@@ -1473,9 +1475,11 @@ public class Admin extends javax.swing.JFrame {
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(412, 412, 412)
+                .addGap(22, 22, 22)
+                .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31)
                 .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(20, Short.MAX_VALUE))
             .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel7Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -1483,9 +1487,9 @@ public class Admin extends javax.swing.JFrame {
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
-        jTabbedPane1.addTab("Members", jPanel7);
+        jTabbedPane1.addTab("Members  ", new javax.swing.ImageIcon("C:\\Users\\Namila Radith\\Documents\\NetBeansProjects\\Library-Management-System\\icons\\members.png"), jPanel7); // NOI18N
 
-        jPanel16.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(""), "Select Member"));
+        jPanel16.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(0, 0, 102)), "Select Resource", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 12), new java.awt.Color(0, 51, 255))); // NOI18N
         jPanel16.setToolTipText("Group");
 
         jLabel44.setText("Book ID :");
@@ -1516,6 +1520,7 @@ public class Admin extends javax.swing.JFrame {
 
         jLabel45.setText("Name :");
 
+        jButton26.setIcon(new javax.swing.ImageIcon("C:\\Users\\Namila Radith\\Documents\\NetBeansProjects\\Library-Management-System\\icons\\Search-iconsmall.png")); // NOI18N
         jButton26.setText("Search Book");
         jButton26.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1574,14 +1579,13 @@ public class Admin extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jButton25))
                             .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                            .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jButton26)
-                                .addGroup(jPanel16Layout.createSequentialGroup()
-                                    .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(searchByNameRadio)
-                                        .addComponent(jLabel45))
-                                    .addGap(18, 18, 18)
-                                    .addComponent(searchByNameBox, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                            .addGroup(jPanel16Layout.createSequentialGroup()
+                                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(searchByNameRadio)
+                                    .addComponent(jLabel45))
+                                .addGap(18, 18, 18)
+                                .addComponent(searchByNameBox, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jButton26, javax.swing.GroupLayout.Alignment.TRAILING))))
                 .addContainerGap(25, Short.MAX_VALUE))
         );
         jPanel16Layout.setVerticalGroup(
@@ -1599,10 +1603,10 @@ public class Admin extends javax.swing.JFrame {
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel45)
                     .addComponent(searchByNameBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(13, 13, 13)
                 .addComponent(jButton26)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane13, javax.swing.GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton30)
@@ -1610,7 +1614,9 @@ public class Admin extends javax.swing.JFrame {
                 .addGap(16, 16, 16))
         );
 
-        jPanel18.setBorder(javax.swing.BorderFactory.createTitledBorder("Resource Details "));
+        jPanel18.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Resource Details ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 12), new java.awt.Color(0, 51, 204))); // NOI18N
+        jPanel18.setForeground(new java.awt.Color(0, 51, 204));
+        jPanel18.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         jLabel9.setText("Title :");
 
@@ -1826,7 +1832,7 @@ public class Admin extends javax.swing.JFrame {
                         .addComponent(editionIn, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(10, 10, 10)
                         .addComponent(removeBookButton)))
-                .addContainerGap(107, Short.MAX_VALUE))
+                .addContainerGap(119, Short.MAX_VALUE))
         );
         jPanel18Layout.setVerticalGroup(
             jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1952,10 +1958,10 @@ public class Admin extends javax.swing.JFrame {
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(142, Short.MAX_VALUE))
+                .addContainerGap(123, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Resources", jPanel14);
+        jTabbedPane1.addTab("Resources  ", new javax.swing.ImageIcon("C:\\Users\\Namila Radith\\Documents\\NetBeansProjects\\Library-Management-System\\icons\\resourses.png"), jPanel14); // NOI18N
 
         jPanel15.setBorder(javax.swing.BorderFactory.createTitledBorder("Check Out Peroid "));
 
@@ -2065,7 +2071,7 @@ public class Admin extends javax.swing.JFrame {
                     .addComponent(jLabel61, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField31, javax.swing.GroupLayout.DEFAULT_SIZE, 288, Short.MAX_VALUE)
+                    .addComponent(jTextField31, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
                     .addComponent(jTextField33, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jTextField34, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
@@ -2199,17 +2205,21 @@ public class Admin extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Administration", jPanel11);
+        jTabbedPane1.addTab("Administration  ", new javax.swing.ImageIcon("C:\\Users\\Namila Radith\\Documents\\NetBeansProjects\\Library-Management-System\\icons\\admin.png"), jPanel11); // NOI18N
 
         jButton36.setText("Log Out");
 
         jLabel53.setText("Logged in As : ");
 
         jMenu8.setText("File");
+        jMenu8.setActionCommand("File New");
         jMenuBar4.add(jMenu8);
 
         jMenu9.setText("Edit");
         jMenuBar4.add(jMenu9);
+
+        jMenu11.setText("Help");
+        jMenuBar4.add(jMenu11);
 
         setJMenuBar(jMenuBar4);
 
@@ -3063,6 +3073,7 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu11;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
