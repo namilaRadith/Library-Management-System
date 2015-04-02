@@ -2754,7 +2754,7 @@ int i;
                         .addComponent(jSeparator3)
                         .addContainerGap())))
             .addGroup(layout.createSequentialGroup()
-                .addGap(88, 88, 88)
+                .addContainerGap()
                 .addComponent(jTabbedPane1)
                 .addContainerGap())
         );
