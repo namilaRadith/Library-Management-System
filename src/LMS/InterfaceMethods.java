@@ -18,11 +18,14 @@ public class InterfaceMethods {
     public static void hideGroup(JPanel showThis, JPanel hideThis) {
         Component[] component9 = showThis.getComponents();
         Component[] component10 = hideThis.getComponents();
+        
         showThis.setEnabled(true);
         hideThis.setEnabled(false);
+        
         for (int i = 0; i < component9.length; i++) {
             component9[i].setEnabled(true);
             component10[i].setEnabled(false);
+            
         }
     }
     

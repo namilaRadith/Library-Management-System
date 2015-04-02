@@ -3,7 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package LMS; // add your project here
+
+/**
+ * @author Basuru
+ */
+
+package LMS; 
 
 import Interfaces.Admin;
 import Interfaces.Admin;
@@ -25,10 +30,6 @@ import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.view.JasperViewer;
 
-/**
- *
- * @author Basuru
- */
 public class ReportGenerator {
     Connection con = DBconnect.connect();
     
@@ -46,7 +47,7 @@ public class ReportGenerator {
             //JasperPrint jasperprint = JasperFillManager.fillReport(jasperreport, null,con);
              JasperPrint jasperprint = JasperFillManager.fillReport(jasperreport, null, con);
              
-             //JasperViewer.viewReport(jasperprint);
+             JasperViewer.viewReport(jasperprint);
              JasperExportManager.exportReportToPdfFile(jasperprint, "src//Reports//Report.pdf"); // Location to output the pdf file
              //JasperViewer.viewReport(jasperprint);
              
@@ -83,7 +84,7 @@ public class ReportGenerator {
             //JasperPrint jasperprint = JasperFillManager.fillReport(jasperreport, null,con);
              JasperPrint jasperprint = JasperFillManager.fillReport(jasperreport, type, con);
              
-             //JasperViewer.viewReport(jasperprint);
+             JasperViewer.viewReport(jasperprint);
              JasperExportManager.exportReportToPdfFile(jasperprint, "src//Reports//ParameterizedReport.pdf"); // Location to output the pdf file
              //JasperViewer.viewReport(jasperprint);
              

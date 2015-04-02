@@ -37,13 +37,13 @@ FROM Members]]>
 	<title>
 		<band height="72">
 			<frame>
-				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="d66a7532-7343-4b10-bb85-8fbc489127e5"/>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006666" uuid="d66a7532-7343-4b10-bb85-8fbc489127e5"/>
 				<staticText>
 					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="b205b03f-9739-4a86-959f-e0ad5e9cae95"/>
 					<textElement>
 						<font size="34" isBold="true"/>
 					</textElement>
-					<text><![CDATA[Members]]></text>
+					<text><![CDATA[Report]]></text>
 				</staticText>
 				<staticText>
 					<reportElement x="395" y="43" width="180" height="20" forecolor="#FFFFFF" uuid="ef95eb89-ba53-4bd0-9d60-f542e29d7587"/>
@@ -51,6 +51,10 @@ FROM Members]]>
 						<font size="14" isBold="false"/>
 					</textElement>
 					<text><![CDATA[List of all the Members]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="20" y="72" width="100" height="20" uuid="a54e3e29-ffad-49ea-a548-d2d85076e8fd"/>
+					<text><![CDATA[Report Type : Normal]]></text>
 				</staticText>
 			</frame>
 		</band>
@@ -75,42 +79,42 @@ FROM Members]]>
 				<textElement textAlignment="Center">
 					<font size="10" isBold="true"/>
 				</textElement>
-				<text><![CDATA[fname]]></text>
+				<text><![CDATA[FirstName]]></text>
 			</staticText>
 			<staticText>
 				<reportElement mode="Opaque" x="113" y="0" width="69" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="380baf2a-28fd-46e1-8d64-ab866f42c319"/>
 				<textElement textAlignment="Center">
 					<font size="10" isBold="true"/>
 				</textElement>
-				<text><![CDATA[lname]]></text>
+				<text><![CDATA[LastName]]></text>
 			</staticText>
 			<staticText>
 				<reportElement mode="Opaque" x="181" y="0" width="69" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="a0930e94-f35b-44a3-9030-4167a17684f6"/>
 				<textElement textAlignment="Center">
 					<font size="10" isBold="true"/>
 				</textElement>
-				<text><![CDATA[address]]></text>
+				<text><![CDATA[Address]]></text>
 			</staticText>
 			<staticText>
 				<reportElement mode="Opaque" x="250" y="0" width="78" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="aa31b5c1-6477-41f3-b22e-a8088eaf1c43"/>
 				<textElement textAlignment="Center">
 					<font size="10" isBold="true"/>
 				</textElement>
-				<text><![CDATA[phone]]></text>
+				<text><![CDATA[Phone]]></text>
 			</staticText>
 			<staticText>
 				<reportElement mode="Opaque" x="328" y="0" width="86" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="268128c9-5deb-4399-8e6d-dca4165b508c"/>
 				<textElement textAlignment="Center">
 					<font size="10" isBold="true"/>
 				</textElement>
-				<text><![CDATA[email]]></text>
+				<text><![CDATA[Email]]></text>
 			</staticText>
 			<staticText>
 				<reportElement mode="Opaque" x="414" y="0" width="69" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="d351a200-990d-4247-ab9a-6a3ff2cb2ca6"/>
 				<textElement textAlignment="Center">
 					<font size="10" isBold="true"/>
 				</textElement>
-				<text><![CDATA[type]]></text>
+				<text><![CDATA[Type]]></text>
 			</staticText>
 			<staticText>
 				<reportElement mode="Opaque" x="483" y="0" width="69" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="3efb8e46-d855-4b3f-ba70-51e671cf5fe9"/>
