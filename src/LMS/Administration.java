@@ -16,7 +16,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Chamara
+ * @author Chamara Madushan
  */
 public class Administration {
     
